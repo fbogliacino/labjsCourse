@@ -221,11 +221,169 @@
         {
           "title": "",
           "message": "run",
-          "code": "\r\n\r\nconst feedbackParagraph = document.getElementById(\"feedback\");\r\n\r\nconst correctMessage =\"Correct! Some additional text\";\r\nconst incorrectMessage =\"Incorrect! Some additional text\";\r\nconst continueButton = document.getElementsByTagName(\"button\");\r\n\r\n/*\r\ndocument.getElementById(\"CQ_1\").addEventListener(\"click\", (event)=>{\r\n     feedbackParagraph.innerText=correctMessage;  \r\n});\r\ndocument.getElementById(\"CQ_2\").addEventListener(\"click\", ()=>{\r\n   feedbackParagraph.innerText=incorrectMessage; \r\n});\r\ndocument.getElementById(\"CQ_3\").addEventListener(\"click\", ()=>{\r\n   feedbackParagraph.innerText=incorrectMessage; \r\n});\r\ndocument.getElementById(\"CQ_4\").addEventListener(\"click\", ()=>{\r\n   feedbackParagraph.innerText=incorrectMessage; \r\n});\r\n*/\r\n\r\n\r\nconst responses = document.getElementsByTagName(\"input\");\r\nresponses.forEach((element)=> element.addEventListener(\"click\", (event) => {\r\n      if (event.target.value==1) {\r\n          feedbackParagraph.innerText=correctMessage;\r\n          continueButton[0].disabled=false;\r\n      } else {\r\n          feedbackParagraph.innerText=incorrectMessage;\r\n          continueButton[0].disabled=true; \r\n      };\r\n}));\r\n\r\n/*\r\nfor (let i=0; i<responses.length; i++) {\r\n  responses[i].\r\n})};\r\n*/\r\n\r\n\r\n\r\n\r\n"
+          "code": "\r\n\r\nconst feedbackParagraph = document.getElementById(\"feedback\");\r\n\r\nconst correctMessage =\"Correct! Some additional text\";\r\nconst incorrectMessage =\"Incorrect! Some additional text\";\r\nconst continueButton = document.getElementsByTagName(\"button\");\r\nlet ds=this.options.datastore;\r\n\r\n///let attempts = parseInt(ds.get('attemptsCQ')) || 0; \r\n\r\n/*\r\ndocument.getElementById(\"CQ_1\").addEventListener(\"click\", (event)=>{\r\n     feedbackParagraph.innerText=correctMessage;  \r\n});\r\ndocument.getElementById(\"CQ_2\").addEventListener(\"click\", ()=>{\r\n   feedbackParagraph.innerText=incorrectMessage; \r\n});\r\ndocument.getElementById(\"CQ_3\").addEventListener(\"click\", ()=>{\r\n   feedbackParagraph.innerText=incorrectMessage; \r\n});\r\ndocument.getElementById(\"CQ_4\").addEventListener(\"click\", ()=>{\r\n   feedbackParagraph.innerText=incorrectMessage; \r\n});\r\n*/\r\n\r\n\r\nconst responses = document.getElementsByTagName(\"input\");\r\nresponses.forEach((element)=> element.addEventListener(\"click\", (event) => {\r\n      if (event.target.value==1) {\r\n          feedbackParagraph.innerText=correctMessage;\r\n          let attempts = parseInt(ds.get('attemptsCQ')) || 0; \r\n          attempts+=1;\r\n          ds.set('attemptsCQ', attempts);\r\n          continueButton[0].disabled=false;\r\n      } else {\r\n          feedbackParagraph.innerText=incorrectMessage;\r\n          continueButton[0].disabled=true; \r\n          let attempts = parseInt(ds.get('attemptsCQ')) || 0; \r\n          attempts+=1;\r\n          ds.set('attemptsCQ', attempts);\r\n      };\r\n}));\r\n\r\n/*\r\nfor (let i=0; i<responses.length; i++) {\r\n  responses[i].\r\n})};\r\n*/\r\n\r\n\r\n\r\n\r\n"
         }
       ],
       "title": "MPL - instructions with q",
-      "_tab": "Scripts"
+      "_tab": "Content"
+    },
+    "8": {
+      "id": "8",
+      "type": "lab.html.Form",
+      "content": "<header>\n  <h1 class=\"h1\">Instructions<h1>\n</header>\n<main>\n<form id=\"mplTask\">\n\n<p class=\"paragraph\">You are allocating money between yourself and another participant. </p>\n\n<div class=\"myDiv\">\n<table>\n  <thead>\n    <tr>\n      <td></td><td><strong>Left option</strong></td><td><strong>Right option</strong></td><td></td>\n    </tr>\n  </thead> \n      <tr>\n      <td><label class=\"labelInputs\" for=\"MDG0_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG0_l\" name=\"MDG0\" type=\"radio\" value=\"1\" required></td><td><input id=\"MDG0_r\" name=\"MDG0\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG0_r\"><strong>0</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInputs\" for=\"MDG1_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG1_l\" name=\"MDG1\" type=\"radio\" value=\"1\" required></td><td><input id=\"MDG1_r\" name=\"MDG1\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG1_r\"><strong>1</strong> for <strong>You</strong>, <strong>1</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInputs\" for=\"MDG2_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG2_l\" name=\"MDG2\" type=\"radio\" value=\"1\" required></td><td><input id=\"MDG2_r\" name=\"MDG2\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG2_r\"><strong>2</strong> for <strong>You</strong>, <strong>2</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInputs\" for=\"MDG3_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG3_l\" name=\"MDG3\" type=\"radio\" value=\"1\" required></td><td><input id=\"MDG3_r\" name=\"MDG3\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG3_r\"><strong>3</strong> for <strong>You</strong>, <strong>3</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInputs\" for=\"MDG4_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG4_l\" name=\"MDG4\" type=\"radio\" value=\"1\" required></td><td><input id=\"MDG4_r\" name=\"MDG4\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG4_r\"><strong>4</strong> for <strong>You</strong>, <strong>4</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInputs\" for=\"MDG5_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG5_l\" name=\"MDG5\" type=\"radio\" value=\"1\" required></td><td><input id=\"MDG5_r\" name=\"MDG5\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG5_r\"><strong>5</strong> for <strong>You</strong>, <strong>5</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInputs\" for=\"MDG6_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG6_l\" name=\"MDG6\" type=\"radio\" value=\"1\" required></td><td><input id=\"MDG6_r\" name=\"MDG6\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG6_r\"><strong>6</strong> for <strong>You</strong>, <strong>6</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInputs\" for=\"MDG7_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG7_l\" name=\"MDG7\" type=\"radio\" value=\"1\" required></td><td><input id=\"MDG7_r\" name=\"MDG7\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG7_r\"><strong>7</strong> for <strong>You</strong>, <strong>7</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInputs\" for=\"MDG8_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG8_l\" name=\"MDG8\" type=\"radio\" value=\"1\" required></td><td><input id=\"MDG8_r\" name=\"MDG8\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG8_r\"><strong>8</strong> for <strong>You</strong>, <strong>8</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInputs\" for=\"MDG9_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG9_l\" name=\"MDG9\" type=\"radio\" value=\"1\" required></td><td><input id=\"MDG9_r\" name=\"MDG9\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG9_r\"><strong>9</strong> for <strong>You</strong>, <strong>9</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInputs\" for=\"MDG10_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG10_l\" name=\"MDG10\" type=\"radio\" value=\"1\" required></td><td><input id=\"MDG10_r\" name=\"MDG10\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG10_r\"><strong>10</strong> for <strong>You</strong>, <strong>10</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInputs\" for=\"MDG11_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG11_l\" name=\"MDG11\" type=\"radio\" value=\"1\" required></td><td><input id=\"MDG11_r\" name=\"MDG11\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG11_r\"><strong>11</strong> for <strong>You</strong>, <strong>11</strong> for <strong>Other</strong></label></td>\n    </tr>\n</table>\n</div>\n\n  \n</form>\n</main>\n<footer>\n    <button form=\"mplTask\" class=\"continueButton\" type=\"submit\">Continue</button>\n</footer>",
+      "scrollTop": true,
+      "files": [],
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "messageHandlers": [
+        {
+          "title": "",
+          "message": "",
+          "code": ""
+        }
+      ],
+      "title": "MPL task",
+      "_tab": "Content"
+    },
+    "9": {
+      "id": "9",
+      "type": "lab.flow.Sequence",
+      "children": [
+        "5",
+        "7",
+        "8"
+      ],
+      "files": [],
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "messageHandlers": [
+        {
+          "title": "",
+          "message": "",
+          "code": ""
+        }
+      ],
+      "title": "mplTaskSequence"
+    },
+    "10": {
+      "id": "10",
+      "type": "lab.flow.Sequence",
+      "children": [
+        "11"
+      ],
+      "files": [],
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "messageHandlers": [
+        {
+          "title": "",
+          "message": "",
+          "code": ""
+        }
+      ],
+      "title": "cheatingTaskSequence"
+    },
+    "11": {
+      "id": "11",
+      "type": "lab.html.Form",
+      "content": "<form>\n  <input name=\"variable\">\n  <button type=\"submit\">Submit</button>\n</form>",
+      "scrollTop": true,
+      "files": [],
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "messageHandlers": [
+        {
+          "title": "",
+          "message": "",
+          "code": ""
+        }
+      ],
+      "title": "Form"
+    },
+    "12": {
+      "id": "12",
+      "type": "lab.flow.Sequence",
+      "children": [
+        "9",
+        "10"
+      ],
+      "files": [],
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "messageHandlers": [
+        {
+          "title": "",
+          "message": "",
+          "code": ""
+        }
+      ],
+      "title": "outcomeVariables",
+      "shuffle": true
     },
     "root": {
       "id": "root",
@@ -236,8 +394,7 @@
         "1",
         "2",
         "3",
-        "5",
-        "7",
+        "12",
         "6"
       ],
       "parameters": [],
@@ -266,7 +423,7 @@
         "source": "library"
       },
       "style.css": {
-        "content": "data:text/css,%2F*%20Please%20define%20your%20custom%20styles%20here%20*%2F%0D%0Amain%7B%0D%0A%20%20margin-left%3A%20250px%3B%0D%0A%20%20margin-right%3A%20250px%3B%0D%0A%20%20margin-bottom%3A%2010px%3B%0D%0A%20%20background-color%3A%20white%3B%0D%0A%20%20text-align%3A%20justify%3B%0D%0A%20%20line-height%3A%202%3B%0D%0A%20%20padding-left%3A%2010px%3B%0D%0A%20%20position%3A%20relative%3B%0D%0A%20%20display%3A%20flow-root%3B%0D%0A%7D%0D%0A.paragraph%20%7B%0D%0A%20%20text-align%3A%20justify%3B%0D%0A%20%20font-family%3A%20Georgia%2C%20'Times%20New%20Roman'%2C%20Times%2C%20serif%3B%0D%0A%20%20font-size%3A%2012pt%3B%0D%0A%7D%0D%0Aheader%20%7B%0D%0A%20%20background-color%3A%20%23232f3e%3B%0D%0A%20%20margin-left%3A%20250px%3B%0D%0A%20%20margin-right%3A%20250px%3B%0D%0A%7D%0D%0Aheader%20.h1%20%7B%0D%0A%20%20font-family%3A%20Georgia%2C%20serif%3B%0D%0A%20%20color%3A%20white%3B%0D%0A%7D%0D%0A.continueButton%20%7B%0D%0A%20%20width%3A%20200px%3B%20%20%20%20%20%20%20%20%20%20%20%20%20%20%2F*%20fixed%20width%20*%2F%0D%0A%20%20border-radius%3A%2025px%3B%0D%0A%20%20cursor%3A%20pointer%3B%0D%0A%20%20background-color%3A%20yellow%3B%0D%0A%20%20padding%3A%2010px%200%3B%20%20%20%20%20%20%20%20%20%20%0D%0A%20%20color%3Ablack%3B%0D%0A%20%20font-size%3A%2014pt%3B%0D%0A%20%20%20%20text-align%3A%20center%3B%20%20%20%0D%0A%7D%0D%0A.continueButton%3Adisabled%20%7B%0D%0A%20%20width%3A%20200px%3B%20%20%20%20%20%20%20%20%20%20%20%20%20%20%2F*%20fixed%20width%20*%2F%0D%0A%20%20border-radius%3A%2025px%3B%0D%0A%20%20cursor%3A%20not-allowed%3B%0D%0A%20%20background-color%3A%20yellow%3B%0D%0A%20%20padding%3A%2010px%200%3B%20%20%20%20%20%20%20%20%20%20%0D%0A%20%20color%3Ablack%3B%0D%0A%20%20font-size%3A%2014pt%3B%0D%0A%20%20%20%20text-align%3A%20center%3B%20%20%0D%0A%20%20%20%20%20%20opacity%3A%200.6%3B%20%0D%0A%7D%0D%0Afooter%20%7B%0D%0A%20%20%20%20margin-left%3A%20250px%3B%0D%0A%20%20%20%20margin-right%3A%20250px%3B%0D%0A%20%20%20%20margin-bottom%3A%2010px%3B%0D%0A%20%20%20%20background-color%3A%20%23232f3e%3B%0D%0A%7D%0D%0A.myContainer%20%7B%0D%0A%20%20padding-right%3A%2010px%3B%0D%0A%20%20%20border%3A%205px%20solid%20%23333%3B%0D%0A%20%20position%3A%20absolute%3B%0D%0A%20%20bottom%3A%2020px%3B%0D%0A%20%20left%3A%2050%25%3B%0D%0A%20%20transform%3A%20translateX(-50%25)%3B%20%2F*%20shifts%20the%20element%20left%20by%2050%25%20of%20its%20own%20width%20*%2F%0D%0A%7D%0D%0A.labelInputs%20%7B%0D%0A%20%20cursor%3A%20pointer%3B%0D%0A%20%20font-family%3A%20Georgia%2C%20'Times%20New%20Roman'%2C%20Times%2C%20serif%3B%0D%0A%20%20font-size%3A%2012pt%3B%0D%0A%7D%0D%0A.iframeObject%20%7B%0D%0A%20%20%20%20width%3A%20700px%3B%0D%0A%20%20%20%20height%3A%20500px%3B%0D%0A%20%20%20%20margin%3A%200%20auto%20120px%20auto%3B%0D%0A%7D",
+        "content": "data:text/css,%2F*%20Please%20define%20your%20custom%20styles%20here%20*%2F%0D%0Amain%7B%0D%0A%20%20margin-left%3A%20250px%3B%0D%0A%20%20margin-right%3A%20250px%3B%0D%0A%20%20margin-bottom%3A%2010px%3B%0D%0A%20%20background-color%3A%20white%3B%0D%0A%20%20text-align%3A%20justify%3B%0D%0A%20%20line-height%3A%202%3B%0D%0A%20%20padding-left%3A%2010px%3B%0D%0A%20%20position%3A%20relative%3B%0D%0A%20%20display%3A%20flow-root%3B%0D%0A%7D%0D%0A.paragraph%20%7B%0D%0A%20%20text-align%3A%20justify%3B%0D%0A%20%20font-family%3A%20Georgia%2C%20'Times%20New%20Roman'%2C%20Times%2C%20serif%3B%0D%0A%20%20font-size%3A%2012pt%3B%0D%0A%7D%0D%0Aheader%20%7B%0D%0A%20%20background-color%3A%20%23232f3e%3B%0D%0A%20%20margin-left%3A%20250px%3B%0D%0A%20%20margin-right%3A%20250px%3B%0D%0A%7D%0D%0Aheader%20.h1%20%7B%0D%0A%20%20font-family%3A%20Georgia%2C%20serif%3B%0D%0A%20%20color%3A%20white%3B%0D%0A%7D%0D%0A.myDiv%7B%0D%0A%20%20background-color%3A%20blueviolet%3B%0D%0A%20%20margin%3A%20auto%3B%20%20%0D%0A%20%20width%3A%20900px%3B%0D%0A%20%20text-align%3A%20center%3B%0D%0A%7D%0D%0A.continueButton%20%7B%0D%0A%20%20width%3A%20200px%3B%20%20%20%20%20%20%20%20%20%20%20%20%20%20%2F*%20fixed%20width%20*%2F%0D%0A%20%20border-radius%3A%2025px%3B%0D%0A%20%20cursor%3A%20pointer%3B%0D%0A%20%20background-color%3A%20yellow%3B%0D%0A%20%20padding%3A%2010px%200%3B%20%20%20%20%20%20%20%20%20%20%0D%0A%20%20color%3Ablack%3B%0D%0A%20%20font-size%3A%2014pt%3B%0D%0A%20%20%20%20text-align%3A%20center%3B%20%20%20%0D%0A%7D%0D%0A.continueButton%3Adisabled%20%7B%0D%0A%20%20width%3A%20200px%3B%20%20%20%20%20%20%20%20%20%20%20%20%20%20%2F*%20fixed%20width%20*%2F%0D%0A%20%20border-radius%3A%2025px%3B%0D%0A%20%20cursor%3A%20not-allowed%3B%0D%0A%20%20background-color%3A%20yellow%3B%0D%0A%20%20padding%3A%2010px%200%3B%20%20%20%20%20%20%20%20%20%20%0D%0A%20%20color%3Ablack%3B%0D%0A%20%20font-size%3A%2014pt%3B%0D%0A%20%20%20%20text-align%3A%20center%3B%20%20%0D%0A%20%20%20%20%20%20opacity%3A%200.6%3B%20%0D%0A%7D%0D%0Afooter%20%7B%0D%0A%20%20%20%20margin-left%3A%20250px%3B%0D%0A%20%20%20%20margin-right%3A%20250px%3B%0D%0A%20%20%20%20margin-bottom%3A%2010px%3B%0D%0A%20%20%20%20background-color%3A%20%23232f3e%3B%0D%0A%7D%0D%0A.myContainer%20%7B%0D%0A%20%20padding-right%3A%2010px%3B%0D%0A%20%20%20border%3A%205px%20solid%20%23333%3B%0D%0A%20%20position%3A%20absolute%3B%0D%0A%20%20bottom%3A%2020px%3B%0D%0A%20%20left%3A%2050%25%3B%0D%0A%20%20transform%3A%20translateX(-50%25)%3B%20%2F*%20shifts%20the%20element%20left%20by%2050%25%20of%20its%20own%20width%20*%2F%0D%0A%7D%0D%0A.labelInputs%20%7B%0D%0A%20%20cursor%3A%20pointer%3B%0D%0A%20%20font-family%3A%20Georgia%2C%20'Times%20New%20Roman'%2C%20Times%2C%20serif%3B%0D%0A%20%20font-size%3A%2012pt%3B%0D%0A%7D%0D%0A.iframeObject%20%7B%0D%0A%20%20%20%20width%3A%20700px%3B%0D%0A%20%20%20%20height%3A%20500px%3B%0D%0A%20%20%20%20margin%3A%200%20auto%20120px%20auto%3B%0D%0A%7D",
         "source": "library"
       },
       "embedded/042293d1ab04c41f946b6fe1733cdcebfe40235b0b4a44d5449b09ba99df0ab9.pdf": {
