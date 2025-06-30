@@ -1,36 +1,5 @@
 {
   "components": {
-    "1": {
-      "id": "1",
-      "type": "lab.html.Form",
-      "content": "<header>\n  <h1 class=\"h1\">Informed consent<h1>\n</header>\n<main>\n<form id=\"informedConsent\">\n<p class=\"paragraph\"> This is what we will do with your data. </p>\n<p class=\"paragraph\"> These are your rights. </p>\n<p class=\"paragraph\"> This is a very detailed and boring description of who we are, who is financing us, and more and more information. </p>\n<p class=\"paragraph\"> <a href=\"mailto:someone@example.com\">You may also want to contact us</a>. </p>\n\n<div class=\"myContainer\"> \n<input type=\"checkbox\" id=\"checkbox\" name=\"consent\" required> <label class=\"labelInputs\" for=\"checkbox\"> I have read the above and I want to participate </label>\n</div>\n\n  \n  \n</form>\n</main>\n<footer>\n    <button form=\"informedConsent\" class=\"continueButton\" type=\"submit\">Continue</button>\n</footer>",
-      "scrollTop": true,
-      "files": [],
-      "responses": [
-        {
-          "label": "",
-          "event": "",
-          "target": "",
-          "filter": ""
-        }
-      ],
-      "parameters": [
-        {
-          "name": "",
-          "value": "",
-          "type": "string"
-        }
-      ],
-      "messageHandlers": [
-        {
-          "title": "",
-          "message": "",
-          "code": ""
-        }
-      ],
-      "title": "Infomed consent simple",
-      "_tab": "Content"
-    },
     "2": {
       "id": "2",
       "type": "lab.html.Form",
@@ -68,47 +37,10 @@
       "_tab": "Content",
       "plugins": []
     },
-    "3": {
-      "id": "3",
-      "type": "lab.html.Form",
-      "content": "<header>\n  <h1 class=\"h1\">My webpage<h1>\n</header>\n<main>\n<form id=\"xy\">\n  \n  <iframe src=\"https://francescobogliacino.com/\" class=\"iframeObject\" > </iframe>\n\n</form>\n</main>\n<footer>\n    <button form=\"xy\" class=\"continueButton\" type=\"submit\">Continue</button>\n</footer>",
-      "scrollTop": true,
-      "files": [
-        {
-          "localPath": "Fake Informed Consent.pdf",
-          "poolPath": "embedded/042293d1ab04c41f946b6fe1733cdcebfe40235b0b4a44d5449b09ba99df0ab9.pdf"
-        }
-      ],
-      "responses": [
-        {
-          "label": "",
-          "event": "",
-          "target": "",
-          "filter": ""
-        }
-      ],
-      "parameters": [
-        {
-          "name": "",
-          "value": "",
-          "type": "string"
-        }
-      ],
-      "messageHandlers": [
-        {
-          "title": "",
-          "message": "",
-          "code": ""
-        }
-      ],
-      "title": "An example for iframe",
-      "_tab": "Behavior",
-      "plugins": []
-    },
     "4": {
       "id": "4",
       "type": "lab.html.Form",
-      "content": "<header>\n  <h1 class=\"h1\">Welcome<h1>\n</header>\n<main>\n<form id=\"welcome\">\n<p class=\"paragraph\"> Some text</p>\n\n\n  \n  \n</form>\n</main>\n<footer>\n    <button form=\"welcome\" class=\"continueButton\" type=\"submit\">Continue</button>\n</footer>",
+      "content": "<header>\n  <h1 class=\"h1\">Welcome<h1>\n</header>\n<main>\n<form id=\"welcome\">\n<p class=\"paragraph\"> Welcome text</p>\n\n\n  \n  \n</form>\n</main>\n<footer>\n    <button form=\"welcome\" class=\"continueButton\" type=\"submit\">Continue</button>\n</footer>",
       "scrollTop": true,
       "files": [],
       "responses": [
@@ -128,38 +60,7 @@
         }
       ],
       "title": "Bienvenida",
-      "_tab": "Parameters"
-    },
-    "5": {
-      "id": "5",
-      "type": "lab.html.Form",
-      "content": "<header>\n  <h1 class=\"h1\">Instructions<h1>\n</header>\n<main>\n<form id=\"mplInstructions\">\n<p class=\"paragraph\"> Please read these instructions carefully. There are comprehension questions throughout the survey to check your understanding. If you do not answer those questions correctly, you will not be able to continue. </p>\n\n<p class=\"paragraph\">You will decide how to assign points to different participants (including you). For example, you might be paired with another participant and asked to choose between: </p>\n\n<ol class=\"paragraph\">\n  <li>If you select the left option, </li>\n<li>If you select the right option</li>\n</ol>\n<p class=\"paragraph\">We put the rest of the explanation of the MPL.</p>\n\n<p class=\"paragraph\">If this task is selected for payment, how many rows will be implemented and will determine the bonus payments to participants?</p>\n<input id=\"CQ_1\" name=\"comprehensionQ\" type=\"radio\" value=\"1\"  required> <label class=\"labelInputs\" for=\"CQ_1\">1 row</label><br>\n<input id=\"CQ_2\" name=\"comprehensionQ\" type=\"radio\" value=\"2\"> <label class=\"labelInputs\" for=\"CQ_2\">2 rows</label><br>\n<input id=\"CQ_3\" name=\"comprehensionQ\" type=\"radio\" value=\"3\"> <label class=\"labelInputs\" for=\"CQ_3\">3 rows</label><br>\n<input id=\"CQ_4\" name=\"comprehensionQ\" type=\"radio\" value=\"4\"> <label class=\"labelInputs\" for=\"CQ_4\">4 rows</label><br>\n  \n<p class=\"paragraph\" id=\"feedback\"> </p>   \n</form>\n</main>\n<footer>\n    <button form=\"mplInstructions\" class=\"continueButton\" type=\"submit\">Continue</button>\n</footer>",
-      "scrollTop": true,
-      "files": [],
-      "responses": [
-        {
-          "label": "",
-          "event": "",
-          "target": "",
-          "filter": ""
-        }
-      ],
-      "parameters": [
-        {
-          "name": "",
-          "value": "",
-          "type": "string"
-        }
-      ],
-      "messageHandlers": [
-        {
-          "title": "",
-          "message": "run",
-          "code": "/* example of dynamic instructions \r\nlet draw = Math.random();\r\nif (draw <0.5) {\r\n    alert(\"Hello World\");\r\n  } else {\r\n    alert(\"Hell's Bells\")\r\n  };\r\n  */\r\n\r\n/* define two texts */\r\n\r\nconst feedbackParagraph = document.getElementById(\"feedback\");\r\nlet draw = Math.random();\r\nif (draw <0.5) {\r\n    feedbackParagraph.innerText=\"Correct\";\r\n  } else {\r\n    feedbackParagraph.innerText=\"Incorrect\";\r\n  };\r\n\r\n/* also works\r\nif (draw <0.5) {\r\n    feedbackParagraph.innerHTML=\"Correct\";\r\n  } else {\r\n    feedbackParagraph.innerHTML=\"Incorrect\";\r\n  };\r\n*/\r\n/* also works\r\nif (draw <0.5) {\r\n    feedbackParagraph.textContent=\"Correct\";\r\n  } else {\r\n    feedbackParagraph.textContent=\"Incorrect\";\r\n  };\r\n*/\r\n\r\n\r\nlet treatment=this.random.choice(['control','treatment']);\r\nlet row = this.random.range(12);\r\nlet message = ` Hello ${row}`;\r\n\r\nconst form=document.getElementById(\"mplInstructions\");\r\nconst treatmentAnnouncement = document.createElement(\"p\");\r\ntreatmentAnnouncement.classList.add(\"paragraph\");\r\nif (treatment === \"control\") {\r\n  treatmentAnnouncement.textContent=\"control.\";\r\n} else {\r\n  treatmentAnnouncement.textContent=\"treatment.\";\r\n};\r\ntreatmentAnnouncement.insertAdjacentHTML('beforeend', message);\r\nform.append(treatmentAnnouncement);\r\n\r\n\r\n\r\n"
-        }
-      ],
-      "title": "MPL - instructions",
-      "_tab": "Scripts"
+      "_tab": "Content"
     },
     "6": {
       "id": "6",
@@ -194,7 +95,7 @@
     "7": {
       "id": "7",
       "type": "lab.html.Form",
-      "content": "<header>\n  <h1 class=\"h1\">Instructions<h1>\n</header>\n<main>\n<form id=\"mplInstructions\">\n<p class=\"paragraph\"> Please read these instructions carefully. There are comprehension questions throughout the survey to check your understanding. If you do not answer those questions correctly, you will not be able to continue. </p>\n\n<p class=\"paragraph\">You will decide how to assign points to different participants (including you). For example, you might be paired with another participant and asked to choose between: </p>\n\n<ol class=\"paragraph\">\n  <li>If you select the left option, </li>\n<li>If you select the right option</li>\n</ol>\n<p class=\"paragraph\">We put the rest of the explanation of the MPL.</p>\n\n<p class=\"paragraph\">If this task is selected for payment, how many rows will be implemented and will determine the bonus payments to participants?</p>\n<input id=\"CQ_1\" name=\"comprehensionQ\" type=\"radio\" value=\"1\"  required> <label class=\"labelInputs\" for=\"CQ_1\">1 row</label><br>\n<input id=\"CQ_2\" name=\"comprehensionQ\" type=\"radio\" value=\"2\"> <label class=\"labelInputs\" for=\"CQ_2\">2 rows</label><br>\n<input id=\"CQ_3\" name=\"comprehensionQ\" type=\"radio\" value=\"3\"> <label class=\"labelInputs\" for=\"CQ_3\">3 rows</label><br>\n<input id=\"CQ_4\" name=\"comprehensionQ\" type=\"radio\" value=\"4\"> <label class=\"labelInputs\" for=\"CQ_4\">4 rows</label><br>\n  \n<p class=\"paragraph\" id=\"feedback\"> </p>   \n</form>\n</main>\n<footer>\n    <button form=\"mplInstructions\" class=\"continueButton\" disabled type=\"submit\">Continue</button>\n</footer>",
+      "content": "<header>\n  <h1 class=\"h1\">Instructions<h1>\n</header>\n<main>\n<form id=\"mplInstructions\">\n<p class=\"paragraph\"> Please read these instructions carefully. There are comprehension questions throughout the survey to check your understanding. If you do not answer those questions correctly, you will not be able to continue. </p>\n\n<p class=\"paragraph\">You will decide how to assign points to different participants (including you). </p>\n\n<ol class=\"paragraph\">\n  <li>If you select the left option, </li>\n<li>If you select the right option</li>\n</ol>\n<p class=\"paragraph\">We put the rest of the explanation of the MPL.</p>\n\n<p class=\"paragraph\">If this task is selected for payment, how many rows will be implemented and will determine the bonus payments to participants?</p>\n<input id=\"CQ_1\" name=\"comprehensionQ\" type=\"radio\" value=\"1\"  required> <label class=\"labelInputs\" for=\"CQ_1\">1 row</label><br>\n<input id=\"CQ_2\" name=\"comprehensionQ\" type=\"radio\" value=\"2\"> <label class=\"labelInputs\" for=\"CQ_2\">2 rows</label><br>\n<input id=\"CQ_3\" name=\"comprehensionQ\" type=\"radio\" value=\"3\"> <label class=\"labelInputs\" for=\"CQ_3\">3 rows</label><br>\n<input id=\"CQ_4\" name=\"comprehensionQ\" type=\"radio\" value=\"4\"> <label class=\"labelInputs\" for=\"CQ_4\">4 rows</label><br>\n  \n<p class=\"paragraph\" id=\"feedback\"> </p>   \n</form>\n</main>\n<footer>\n    <button form=\"mplInstructions\" class=\"continueButton\" disabled type=\"submit\">Continue</button>\n</footer>",
       "scrollTop": true,
       "files": [],
       "responses": [
@@ -225,7 +126,7 @@
     "8": {
       "id": "8",
       "type": "lab.html.Form",
-      "content": "<header>\n  <h1 class=\"h1\">Instructions<h1>\n</header>\n<main>\n<form id=\"mplTask\">\n\n<p class=\"paragraph\">You are allocating money between yourself and another participant. </p>\n\n<div class=\"myDiv\">\n<table>\n  <thead>\n    <tr>\n      <td></td><td><strong>Left option</strong></td><td><strong>Right option</strong></td><td></td>\n    </tr>\n  </thead> \n      <tr>\n      <td><label class=\"labelInputs\" for=\"MDG0_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG0_l\" name=\"MDG0\" type=\"radio\" value=\"1\" required></td><td><input id=\"MDG0_r\" name=\"MDG0\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG0_r\"><strong>0</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInputs\" for=\"MDG1_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG1_l\" name=\"MDG1\" type=\"radio\" value=\"1\" required></td><td><input id=\"MDG1_r\" name=\"MDG1\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG1_r\"><strong>1</strong> for <strong>You</strong>, <strong>1</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInputs\" for=\"MDG2_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG2_l\" name=\"MDG2\" type=\"radio\" value=\"1\" required></td><td><input id=\"MDG2_r\" name=\"MDG2\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG2_r\"><strong>2</strong> for <strong>You</strong>, <strong>2</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInputs\" for=\"MDG3_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG3_l\" name=\"MDG3\" type=\"radio\" value=\"1\" required></td><td><input id=\"MDG3_r\" name=\"MDG3\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG3_r\"><strong>3</strong> for <strong>You</strong>, <strong>3</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInputs\" for=\"MDG4_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG4_l\" name=\"MDG4\" type=\"radio\" value=\"1\" required></td><td><input id=\"MDG4_r\" name=\"MDG4\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG4_r\"><strong>4</strong> for <strong>You</strong>, <strong>4</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInputs\" for=\"MDG5_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG5_l\" name=\"MDG5\" type=\"radio\" value=\"1\" required></td><td><input id=\"MDG5_r\" name=\"MDG5\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG5_r\"><strong>5</strong> for <strong>You</strong>, <strong>5</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInputs\" for=\"MDG6_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG6_l\" name=\"MDG6\" type=\"radio\" value=\"1\" required></td><td><input id=\"MDG6_r\" name=\"MDG6\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG6_r\"><strong>6</strong> for <strong>You</strong>, <strong>6</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInputs\" for=\"MDG7_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG7_l\" name=\"MDG7\" type=\"radio\" value=\"1\" required></td><td><input id=\"MDG7_r\" name=\"MDG7\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG7_r\"><strong>7</strong> for <strong>You</strong>, <strong>7</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInputs\" for=\"MDG8_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG8_l\" name=\"MDG8\" type=\"radio\" value=\"1\" required></td><td><input id=\"MDG8_r\" name=\"MDG8\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG8_r\"><strong>8</strong> for <strong>You</strong>, <strong>8</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInputs\" for=\"MDG9_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG9_l\" name=\"MDG9\" type=\"radio\" value=\"1\" required></td><td><input id=\"MDG9_r\" name=\"MDG9\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG9_r\"><strong>9</strong> for <strong>You</strong>, <strong>9</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInputs\" for=\"MDG10_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG10_l\" name=\"MDG10\" type=\"radio\" value=\"1\" required></td><td><input id=\"MDG10_r\" name=\"MDG10\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG10_r\"><strong>10</strong> for <strong>You</strong>, <strong>10</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInputs\" for=\"MDG11_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG11_l\" name=\"MDG11\" type=\"radio\" value=\"1\" required></td><td><input id=\"MDG11_r\" name=\"MDG11\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG11_r\"><strong>11</strong> for <strong>You</strong>, <strong>11</strong> for <strong>Other</strong></label></td>\n    </tr>\n</table>\n</div>\n\n  \n</form>\n</main>\n<footer>\n    <button form=\"mplTask\" class=\"continueButton\" type=\"submit\">Continue</button>\n</footer>",
+      "content": "<header>\n  <h1 class=\"h1\">Instructions<h1>\n</header>\n<main>\n<form id=\"mplTask\">\n\n<p class=\"paragraph\">You are allocating money between yourself and another participant. </p>\n\n<div class=\"myDiv\">\n<table>\n  <thead>\n    <tr>\n      <td></td><td><strong>Left option</strong></td><td><strong>Right option</strong></td><td></td>\n    </tr>\n  </thead> \n      <tr>\n      <td><label class=\"labelInputs\" for=\"MDG0_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG0_l\" class=\"checkmark\" type=\"radio\" value=\"1\"></td><td><input id=\"MDG0_r\" class=\"checkmark\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG0_r\"><strong>0</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInputs\" for=\"MDG1_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG1_l\" class=\"checkmark\" type=\"radio\" value=\"1\" ></td><td><input id=\"MDG1_r\" class=\"checkmark\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG1_r\"><strong>1</strong> for <strong>You</strong>, <strong>1</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInputs\" for=\"MDG2_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG2_l\" class=\"checkmark\" type=\"radio\" value=\"1\" ></td><td><input id=\"MDG2_r\" class=\"checkmark\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG2_r\"><strong>2</strong> for <strong>You</strong>, <strong>2</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInputs\" for=\"MDG3_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG3_l\" class=\"checkmark\" type=\"radio\" value=\"1\" ></td><td><input id=\"MDG3_r\" class=\"checkmark\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG3_r\"><strong>3</strong> for <strong>You</strong>, <strong>3</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInputs\" for=\"MDG4_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG4_l\" class=\"checkmark\" type=\"radio\" value=\"1\" ></td><td><input id=\"MDG4_r\" class=\"checkmark\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG4_r\"><strong>4</strong> for <strong>You</strong>, <strong>4</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInputs\" for=\"MDG5_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG5_l\" class=\"checkmark\" type=\"radio\" value=\"1\" ></td><td><input id=\"MDG5_r\" class=\"checkmark\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG5_r\"><strong>5</strong> for <strong>You</strong>, <strong>5</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInputs\" for=\"MDG6_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG6_l\" class=\"checkmark\" type=\"radio\" value=\"1\" ></td><td><input id=\"MDG6_r\" class=\"checkmark\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG6_r\"><strong>6</strong> for <strong>You</strong>, <strong>6</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInputs\" for=\"MDG7_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG7_l\" class=\"checkmark\" type=\"radio\" value=\"1\" ></td><td><input id=\"MDG7_r\" class=\"checkmark\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG7_r\"><strong>7</strong> for <strong>You</strong>, <strong>7</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInputs\" for=\"MDG8_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG8_l\" class=\"checkmark\" type=\"radio\" value=\"1\" ></td><td><input id=\"MDG8_r\" class=\"checkmark\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG8_r\"><strong>8</strong> for <strong>You</strong>, <strong>8</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInputs\" for=\"MDG9_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG9_l\" class=\"checkmark\" type=\"radio\" value=\"1\" ></td><td><input id=\"MDG9_r\" class=\"checkmark\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG9_r\"><strong>9</strong> for <strong>You</strong>, <strong>9</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInputs\" for=\"MDG10_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG10_l\" class=\"checkmark\" type=\"radio\" value=\"1\" ></td><td><input id=\"MDG10_r\" class=\"checkmark\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG10_r\"><strong>10</strong> for <strong>You</strong>, <strong>10</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInputs\" for=\"MDG11_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG11_l\" class=\"checkmark\" type=\"radio\" value=\"1\" ></td><td><input id=\"MDG11_r\" class=\"checkmark\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG11_r\"><strong>11</strong> for <strong>You</strong>, <strong>11</strong> for <strong>Other</strong></label></td>\n    </tr>\n</table>\n</div>\n\n  \n</form>\n</main>\n<footer>\n    <button form=\"mplTask\" class=\"continueButton\" disabled type=\"submit\">Continue</button>\n</footer>",
       "scrollTop": true,
       "files": [],
       "responses": [
@@ -246,18 +147,17 @@
       "messageHandlers": [
         {
           "title": "",
-          "message": "",
-          "code": ""
+          "message": "run",
+          "code": "\r\nlet inputs = document.getElementsByClassName('checkmark');\r\nlet radios = document.getElementsByClassName('checkmark');\r\nlet ds= this.options.datastore;\r\nlet continueButton = document.getElementsByClassName('continueButton');\r\n\r\nfor (let jx=0; jx<radios.length; jx++) {\r\n  radios[jx].addEventListener(\"click\", (event) => {\r\n            if (event.target.value==\"2\") {\r\n                for (let key=0;key<jx; key++) {\r\n                  if (inputs[key].value==\"1\" && key<(jx-1)) {\r\n                      inputs[key].checked=true;\r\n                  } else {\r\n                      inputs[key].checked=false;\r\n                  }\r\n                  };\r\n                  for (let ky=(jx+1);ky<radios.length; ky++) {\r\n                            if (inputs[ky].value==\"2\") {\r\n                                inputs[ky].checked=true;\r\n                            } else {\r\n                                inputs[ky].checked=false;\r\n                            }\r\n                  }; \r\n            } else {\r\n                    for (let key=0;key<jx; key++) {\r\n                  if (inputs[key].value==\"1\") {\r\n                      inputs[key].checked=true;\r\n                  } else {\r\n                      inputs[key].checked=false;\r\n                  }\r\n                  };\r\n                  for (let ky=(jx+1);ky<radios.length; ky++) {\r\n                            if (inputs[ky].value==\"2\" && ky>(jx+2)) {\r\n                                inputs[ky].checked=true;\r\n                            } else {\r\n                                inputs[ky].checked=false;\r\n                            }\r\n                  }; \r\n            }\r\n        continueButton[0].disabled=false;\r\n  });\r\n};\r\n\r\ncontinueButton[0].addEventListener(\"click\", ()=>{\r\n            let mplRadios=document.getElementsByClassName('checkmark');\r\n            let switchingPoint=0;\r\n            for (let kx=0; kx<mplRadios.length; kx++) {\r\n              if (mplRadios[kx].value==\"1\" && mplRadios[kx].checked==true) {\r\n                      switchingPoint+=1;\r\n              };\r\n            };\r\n        ds.set('switchingPoint', switchingPoint);\r\n});\r\n\r\n"
         }
       ],
       "title": "MPL task",
-      "_tab": "Content"
+      "_tab": "Scripts"
     },
     "9": {
       "id": "9",
       "type": "lab.flow.Sequence",
       "children": [
-        "5",
         "7",
         "8"
       ],
@@ -290,7 +190,8 @@
       "id": "10",
       "type": "lab.flow.Sequence",
       "children": [
-        "11"
+        "11",
+        "16"
       ],
       "files": [],
       "responses": [
@@ -320,7 +221,7 @@
     "11": {
       "id": "11",
       "type": "lab.html.Form",
-      "content": "<form>\n  <input name=\"variable\">\n  <button type=\"submit\">Submit</button>\n</form>",
+      "content": "<header>\n  <h1 class=\"h1\">Guessing the number<h1>\n</header>\n<main>\n<form id=\"cheatingTask\">\n<p class=\"paragraph\"> Think at a number between 1 and 4, then the computer will randomly select a number. If the number is the same as the one you thought, you will receive 10 points and your counterpart 0 points. If the number is the same as the one you thought, you will receive 10 points and your counterpart 0 points. </p>\n<p class=\"paragraph\"> Now, think at the number before pressing \"Continue\".</p>\n\n\n\n  \n  \n</form>\n</main>\n<footer>\n    <button form=\"cheatingTask\" class=\"continueButton\" type=\"submit\">Continue</button>\n</footer>",
       "scrollTop": true,
       "files": [],
       "responses": [
@@ -345,12 +246,13 @@
           "code": ""
         }
       ],
-      "title": "Form"
+      "title": "cheatingInstructions"
     },
     "12": {
       "id": "12",
       "type": "lab.flow.Sequence",
       "children": [
+        "19",
         "9",
         "10"
       ],
@@ -504,11 +406,126 @@
         {
           "title": "",
           "message": "run",
-          "code": "const group = document.getElementById(\"group\");\r\nconst ingroup = document.getElementById(\"ingroup\");\r\nconst paragraph = document.getElementById(\"highlight\");\r\nlet treatment=this.random.choice(['ingroup','outgroup']);\r\n\r\nlet artPreferences=this.state.artPreferences;\r\nif (artPreferences<3) {\r\n  group.textContent = \"Klee\";\r\n  if (treatment == \"ingroup\") {\r\n        ingroup.textContent = \"Klee\";\r\n        paragraph.insertAdjacentHTML('beforeend', 'Klee');\r\n  } else {\r\n        ingroup.textContent = \"Kandinsky\";\r\n        paragraph.insertAdjacentHTML('beforeend', 'Kandinsky');\r\n  }\r\n} else {\r\n    group.textContent = \"Kandinsky\";\r\n  if (treatment == \"outgroup\") {\r\n        ingroup.textContent = \"Klee\";\r\n        paragraph.insertAdjacentHTML('beforeend', 'Klee');\r\n  } else {\r\n        ingroup.textContent = \"Kandinsky\";\r\n        paragraph.insertAdjacentHTML('beforeend', 'Kandinsky');\r\n  }\r\n}\r\n"
+          "code": "const group = document.getElementById(\"group\");\r\nconst ingroup = document.getElementById(\"ingroup\");\r\nconst paragraph = document.getElementById(\"highlight\");\r\nlet treatment=this.random.choice(['ingroup','outgroup']);\r\n\r\nlet artPreferences=this.state.artPreferences;\r\nif (artPreferences<3) {\r\n  group.textContent = \"Klee\";\r\n  if (treatment == \"ingroup\") {\r\n        ingroup.textContent = \"Klee\";\r\n        paragraph.insertAdjacentHTML('beforeend', 'Klee');\r\n  } else {\r\n        ingroup.textContent = \"Kandinsky\";\r\n        paragraph.insertAdjacentHTML('beforeend', 'Kandinsky');\r\n  }\r\n} else {\r\n    group.textContent = \"Kandinsky\";\r\n  if (treatment == \"outgroup\") {\r\n        ingroup.textContent = \"Klee\";\r\n        paragraph.insertAdjacentHTML('beforeend', 'Klee');\r\n  } else {\r\n        ingroup.textContent = \"Kandinsky\";\r\n        paragraph.insertAdjacentHTML('beforeend', 'Kandinsky');\r\n  }\r\n}\r\n\r\nthis.state.treatment = treatment;\r\n\r\n"
         }
       ],
       "title": "treatmentAssignment",
       "_tab": "Scripts"
+    },
+    "16": {
+      "id": "16",
+      "type": "lab.html.Form",
+      "content": "<header>\n  <h1 class=\"h1\">Guessing the number<h1>\n</header>\n<main>\n<form id=\"cheatingTask\">\n<p class=\"paragraph\"> The computer draw number <tag id=\"draw\"></tag>.</p>\n\n<p class=\"paragraph\">Was this the number you thought? Remember: If the number is the same as the one you thought, you will receive 10 points and your counterpart 0 points. If the number is the same as the one you thought, you will receive 10 points and your counterpart 0 points.</p>\n<input id=\"cheating0\" name=\"cheating\" type=\"radio\" value=\"0\"  required> <label class=\"labelInputs\" for=\"cheating0\">No</label><br>\n<input id=\"cheating1\" name=\"cheating\" type=\"radio\" value=\"1\"> <label class=\"labelInputs\" for=\"cheating1\">Yes</label><br>\n\n\n\n  \n  \n</form>\n</main>\n<footer>\n    <button form=\"cheatingTask\" class=\"continueButton\" type=\"submit\">Continue</button>\n</footer>",
+      "scrollTop": true,
+      "files": [],
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "messageHandlers": [
+        {
+          "title": "",
+          "message": "",
+          "code": ""
+        }
+      ],
+      "title": "cheatingTask"
+    },
+    "17": {
+      "id": "17",
+      "type": "lab.html.Form",
+      "content": "<header>\n  <h1 class=\"h1\">IN or OUT?<h1>\n</header>\n<main>\n<form id=\"trust\">\n<p class=\"paragraph\"> Instructions </p>\n<p class=\"paragraph\"> This is the message from the receiver: <tag id=\"promise\"></tag> </p>\n<p class=\"paragraph\"> Do you want IN or OUT? </p>\n<input id=\"trust0\" name=\"trust\" type=\"radio\" value=\"0\"  required> <label class=\"labelInputs\" for=\"trust0\">IN</label><br>\n<input id=\"trust1\" name=\"trust\" type=\"radio\" value=\"1\"> <label class=\"labelInputs\" for=\"trust1\">OUT</label><br>\n\n\n  \n  \n</form>\n</main>\n<footer>\n    <button form=\"trust\" class=\"continueButton\" type=\"submit\">Continue</button>\n</footer>",
+      "scrollTop": true,
+      "files": [],
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "messageHandlers": [
+        {
+          "title": "",
+          "message": "run",
+          "code": "let promises = ['I will roll', 'Trust me', 'Do as you like'];\r\nlet choiceB = [1, 0, 1];\r\nlet IDs = ['code1', 'code2', 'code3'];\r\n\r\n\r\n\r\nlet Index = this.random.range(3);\r\n\r\nconst tagPromise=document.getElementById('promise');\r\n\r\ntagPromise.textContent=promises[Index];\r\n\r\nthis.state.choiceByB = choiceB[Index];\r\nthis.state.matchedB = IDs[Index];\r\nthis.state.promise = promises[Index];\r\n\r\n"
+        }
+      ],
+      "title": "mainChoice",
+      "_tab": "Scripts"
+    },
+    "19": {
+      "id": "19",
+      "type": "lab.flow.Loop",
+      "children": [
+        "17"
+      ],
+      "templateParameters": {
+        "columns": [
+          {
+            "name": "Index",
+            "type": "string"
+          }
+        ],
+        "rows": [
+          [
+            "0"
+          ],
+          [
+            "1"
+          ],
+          [
+            "2"
+          ]
+        ]
+      },
+      "sample": {
+        "mode": "draw-shuffle",
+        "n": "1"
+      },
+      "files": [],
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "messageHandlers": [
+        {
+          "title": "",
+          "message": "",
+          "code": ""
+        }
+      ],
+      "title": "Trust"
     },
     "root": {
       "id": "root",
@@ -516,9 +533,7 @@
       "type": "lab.flow.Sequence",
       "children": [
         "4",
-        "1",
         "2",
-        "3",
         "14",
         "15",
         "12",
@@ -531,7 +546,7 @@
         }
       ],
       "metadata": {
-        "title": "This is a collective project",
+        "title": "This is a collective project - details",
         "description": "This is some initial description ",
         "repository": "https://github.com/fbogliacino/labjsCourse",
         "contributors": "Francesco Bogliacino "
@@ -550,7 +565,7 @@
         "source": "library"
       },
       "style.css": {
-        "content": "data:text/css,%2F*%20Please%20define%20your%20custom%20styles%20here%20*%2F%0D%0Amain%7B%0D%0A%20%20margin-left%3A%20250px%3B%0D%0A%20%20margin-right%3A%20250px%3B%0D%0A%20%20margin-bottom%3A%2010px%3B%0D%0A%20%20background-color%3A%20white%3B%0D%0A%20%20text-align%3A%20justify%3B%0D%0A%20%20line-height%3A%202%3B%0D%0A%20%20padding-left%3A%2010px%3B%0D%0A%20%20position%3A%20relative%3B%0D%0A%20%20display%3A%20flow-root%3B%0D%0A%7D%0D%0A.paragraph%20%7B%0D%0A%20%20text-align%3A%20justify%3B%0D%0A%20%20font-family%3A%20Georgia%2C%20'Times%20New%20Roman'%2C%20Times%2C%20serif%3B%0D%0A%20%20font-size%3A%2012pt%3B%0D%0A%7D%0D%0Aheader%20%7B%0D%0A%20%20background-color%3A%20%23232f3e%3B%0D%0A%20%20margin-left%3A%20250px%3B%0D%0A%20%20margin-right%3A%20250px%3B%0D%0A%7D%0D%0Aheader%20.h1%20%7B%0D%0A%20%20font-family%3A%20Georgia%2C%20serif%3B%0D%0A%20%20color%3A%20white%3B%0D%0A%7D%0D%0A.myDiv%7B%0D%0A%20%20background-color%3A%20blueviolet%3B%0D%0A%20%20margin%3A%20auto%3B%20%20%0D%0A%20%20width%3A%20900px%3B%0D%0A%20%20text-align%3A%20center%3B%0D%0A%7D%0D%0A.continueButton%20%7B%0D%0A%20%20width%3A%20200px%3B%20%20%20%20%20%20%20%20%20%20%20%20%20%20%2F*%20fixed%20width%20*%2F%0D%0A%20%20border-radius%3A%2025px%3B%0D%0A%20%20cursor%3A%20pointer%3B%0D%0A%20%20background-color%3A%20yellow%3B%0D%0A%20%20padding%3A%2010px%200%3B%20%20%20%20%20%20%20%20%20%20%0D%0A%20%20color%3Ablack%3B%0D%0A%20%20font-size%3A%2014pt%3B%0D%0A%20%20%20%20text-align%3A%20center%3B%20%20%20%0D%0A%7D%0D%0A.continueButton%3Adisabled%20%7B%0D%0A%20%20width%3A%20200px%3B%20%20%20%20%20%20%20%20%20%20%20%20%20%20%2F*%20fixed%20width%20*%2F%0D%0A%20%20border-radius%3A%2025px%3B%0D%0A%20%20cursor%3A%20not-allowed%3B%0D%0A%20%20background-color%3A%20yellow%3B%0D%0A%20%20padding%3A%2010px%200%3B%20%20%20%20%20%20%20%20%20%20%0D%0A%20%20color%3Ablack%3B%0D%0A%20%20font-size%3A%2014pt%3B%0D%0A%20%20%20%20text-align%3A%20center%3B%20%20%0D%0A%20%20%20%20%20%20opacity%3A%200.6%3B%20%0D%0A%7D%0D%0Afooter%20%7B%0D%0A%20%20%20%20margin-left%3A%20250px%3B%0D%0A%20%20%20%20margin-right%3A%20250px%3B%0D%0A%20%20%20%20margin-bottom%3A%2010px%3B%0D%0A%20%20%20%20background-color%3A%20%23232f3e%3B%0D%0A%7D%0D%0A.myContainer%20%7B%0D%0A%20%20padding-right%3A%2010px%3B%0D%0A%20%20%20border%3A%205px%20solid%20%23333%3B%0D%0A%20%20position%3A%20absolute%3B%0D%0A%20%20bottom%3A%2020px%3B%0D%0A%20%20left%3A%2050%25%3B%0D%0A%20%20transform%3A%20translateX(-50%25)%3B%20%2F*%20shifts%20the%20element%20left%20by%2050%25%20of%20its%20own%20width%20*%2F%0D%0A%7D%0D%0A.labelInputs%20%7B%0D%0A%20%20cursor%3A%20pointer%3B%0D%0A%20%20font-family%3A%20Georgia%2C%20'Times%20New%20Roman'%2C%20Times%2C%20serif%3B%0D%0A%20%20font-size%3A%2012pt%3B%0D%0A%7D%0D%0A.iframeObject%20%7B%0D%0A%20%20%20%20width%3A%20700px%3B%0D%0A%20%20%20%20height%3A%20500px%3B%0D%0A%20%20%20%20margin%3A%200%20auto%20120px%20auto%3B%0D%0A%7D%0D%0A.painting%20%7B%0D%0A%20%20width%3A%20250px%3B%20%0D%0A%20%20height%3A%20200px%3B%0D%0A%7D",
+        "content": "data:text/css,%2F*%20Please%20define%20your%20custom%20styles%20here%20*%2F%0D%0Amain%7B%0D%0A%20%20margin-left%3A%20250px%3B%0D%0A%20%20margin-right%3A%20250px%3B%0D%0A%20%20margin-bottom%3A%2010px%3B%0D%0A%20%20background-color%3A%20white%3B%0D%0A%20%20text-align%3A%20justify%3B%0D%0A%20%20line-height%3A%202%3B%0D%0A%20%20padding-left%3A%2010px%3B%0D%0A%20%20position%3A%20relative%3B%0D%0A%20%20display%3A%20flow-root%3B%0D%0A%7D%0D%0A.paragraph%20%7B%0D%0A%20%20text-align%3A%20justify%3B%0D%0A%20%20font-family%3A%20Georgia%2C%20'Times%20New%20Roman'%2C%20Times%2C%20serif%3B%0D%0A%20%20font-size%3A%2012pt%3B%0D%0A%7D%0D%0Aheader%20%7B%0D%0A%20%20background-color%3A%20%23232f3e%3B%0D%0A%20%20margin-left%3A%20250px%3B%0D%0A%20%20margin-right%3A%20250px%3B%0D%0A%7D%0D%0Aheader%20.h1%20%7B%0D%0A%20%20font-family%3A%20Georgia%2C%20serif%3B%0D%0A%20%20color%3A%20white%3B%0D%0A%7D%0D%0A.myDiv%7B%0D%0A%20%20background-color%3A%20blueviolet%3B%0D%0A%20%20margin%3A%20auto%3B%20%20%0D%0A%20%20width%3A%20900px%3B%0D%0A%20%20text-align%3A%20center%3B%0D%0A%7D%0D%0A.continueButton%20%7B%0D%0A%20%20width%3A%20200px%3B%20%20%20%20%20%20%20%20%20%20%20%20%20%20%2F*%20fixed%20width%20*%2F%0D%0A%20%20border-radius%3A%2025px%3B%0D%0A%20%20cursor%3A%20pointer%3B%0D%0A%20%20background-color%3A%20yellow%3B%0D%0A%20%20padding%3A%2010px%200%3B%20%20%20%20%20%20%20%20%20%20%0D%0A%20%20color%3Ablack%3B%0D%0A%20%20font-size%3A%2014pt%3B%0D%0A%20%20%20%20text-align%3A%20center%3B%20%20%20%0D%0A%7D%0D%0A.continueButton%3Adisabled%20%7B%0D%0A%20%20width%3A%20200px%3B%20%20%20%20%20%20%20%20%20%20%20%20%20%20%2F*%20fixed%20width%20*%2F%0D%0A%20%20border-radius%3A%2025px%3B%0D%0A%20%20cursor%3A%20not-allowed%3B%0D%0A%20%20background-color%3A%20yellow%3B%0D%0A%20%20padding%3A%2010px%200%3B%20%20%20%20%20%20%20%20%20%20%0D%0A%20%20color%3Ablack%3B%0D%0A%20%20font-size%3A%2014pt%3B%0D%0A%20%20%20%20text-align%3A%20center%3B%20%20%0D%0A%20%20%20%20%20%20opacity%3A%200.6%3B%20%0D%0A%7D%0D%0Afooter%20%7B%0D%0A%20%20%20%20margin-left%3A%20250px%3B%0D%0A%20%20%20%20margin-right%3A%20250px%3B%0D%0A%20%20%20%20margin-bottom%3A%2010px%3B%0D%0A%20%20%20%20background-color%3A%20%23232f3e%3B%0D%0A%7D%0D%0A.myContainer%20%7B%0D%0A%20%20padding-right%3A%2010px%3B%0D%0A%20%20%20border%3A%205px%20solid%20%23333%3B%0D%0A%20%20position%3A%20absolute%3B%0D%0A%20%20bottom%3A%2020px%3B%0D%0A%20%20left%3A%2050%25%3B%0D%0A%20%20transform%3A%20translateX(-50%25)%3B%20%2F*%20shifts%20the%20element%20left%20by%2050%25%20of%20its%20own%20width%20*%2F%0D%0A%7D%0D%0A.labelInputs%20%7B%0D%0A%20%20cursor%3A%20pointer%3B%0D%0A%20%20font-family%3A%20Georgia%2C%20'Times%20New%20Roman'%2C%20Times%2C%20serif%3B%0D%0A%20%20font-size%3A%2012pt%3B%0D%0A%7D%0D%0A.iframeObject%20%7B%0D%0A%20%20%20%20width%3A%20700px%3B%0D%0A%20%20%20%20height%3A%20500px%3B%0D%0A%20%20%20%20margin%3A%200%20auto%20120px%20auto%3B%0D%0A%7D%0D%0A.painting%20%7B%0D%0A%20%20width%3A%20250px%3B%20%0D%0A%20%20height%3A%20200px%3B%0D%0A%7D%0D%0A.checkmark%20%7B%0D%0A%20%20%20%20%20%20%20%20%20%20background-color%3A%20whitesmoke%3B%0D%0A%20%20%20%20%20%20%20%20%7D",
         "source": "library"
       },
       "embedded/042293d1ab04c41f946b6fe1733cdcebfe40235b0b4a44d5449b09ba99df0ab9.pdf": {
