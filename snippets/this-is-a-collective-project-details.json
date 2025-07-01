@@ -221,7 +221,7 @@
     "11": {
       "id": "11",
       "type": "lab.html.Form",
-      "content": "<header>\n  <h1 class=\"h1\">Guessing the number<h1>\n</header>\n<main>\n<form id=\"cheatingTask\">\n<p class=\"paragraph\"> Think at a number between 1 and 4, then the computer will randomly select a number. If the number is the same as the one you thought, you will receive 10 points and your counterpart 0 points. If the number is the same as the one you thought, you will receive 10 points and your counterpart 0 points. </p>\n<p class=\"paragraph\"> Now, think at the number before pressing \"Continue\".</p>\n\n\n\n  \n  \n</form>\n</main>\n<footer>\n    <button form=\"cheatingTask\" class=\"continueButton\" type=\"submit\">Continue</button>\n</footer>",
+      "content": "<header>\n  <h1 class=\"h1\">Guessing the number<h1>\n</header>\n<main>\n<form id=\"cheatingTask\">\n<p class=\"paragraph\"> Think at a number between 1 and 4, then the computer will randomly select a number. If the number is the same as the one you thought, you will receive 5 points and your counterpart 5 points. If the number is different from the one you thought, you will receive 1 points and your counterpart 9 points. </p>\n<p class=\"paragraph\"> Now, think at the number before pressing \"Continue\".</p>\n\n\n\n  \n  \n</form>\n</main>\n<footer>\n    <button form=\"cheatingTask\" class=\"continueButton\" type=\"submit\">Continue</button>\n</footer>",
       "scrollTop": true,
       "files": [],
       "responses": [
@@ -415,7 +415,7 @@
     "16": {
       "id": "16",
       "type": "lab.html.Form",
-      "content": "<header>\n  <h1 class=\"h1\">Guessing the number<h1>\n</header>\n<main>\n<form id=\"cheatingTask\">\n<p class=\"paragraph\"> The computer draw number <tag id=\"draw\"></tag>.</p>\n\n<p class=\"paragraph\">Was this the number you thought? Remember: If the number is the same as the one you thought, you will receive 10 points and your counterpart 0 points. If the number is the same as the one you thought, you will receive 10 points and your counterpart 0 points.</p>\n<input id=\"cheating0\" name=\"cheating\" type=\"radio\" value=\"0\"  required> <label class=\"labelInputs\" for=\"cheating0\">No</label><br>\n<input id=\"cheating1\" name=\"cheating\" type=\"radio\" value=\"1\"> <label class=\"labelInputs\" for=\"cheating1\">Yes</label><br>\n\n\n\n  \n  \n</form>\n</main>\n<footer>\n    <button form=\"cheatingTask\" class=\"continueButton\" type=\"submit\">Continue</button>\n</footer>",
+      "content": "<header>\n  <h1 class=\"h1\">Guessing the number<h1>\n</header>\n<main>\n<form id=\"cheatingTask\">\n<p class=\"paragraph\"> The computer draw number <tag id=\"draw\"></tag>.</p>\n\n<p class=\"paragraph\">Was this the number you thought? Remember: If the number is the same as the one you thought, you will receive 5 points and your counterpart 5 points. If the number is different from the one you thought, you will receive 1 points and your counterpart 9 points.</p>\n<input id=\"cheating0\" name=\"cheating\" type=\"radio\" value=\"0\"  required> <label class=\"labelInputs\" for=\"cheating0\">No</label><br>\n<input id=\"cheating1\" name=\"cheating\" type=\"radio\" value=\"1\"> <label class=\"labelInputs\" for=\"cheating1\">Yes</label><br>\n\n\n\n  \n  \n</form>\n</main>\n<footer>\n    <button form=\"cheatingTask\" class=\"continueButton\" type=\"submit\">Continue</button>\n</footer>",
       "scrollTop": true,
       "files": [],
       "responses": [
