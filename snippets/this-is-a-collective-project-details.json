@@ -285,7 +285,7 @@
     "13": {
       "id": "13",
       "type": "lab.html.Form",
-      "content": "<header>\n  <h1 class=\"h1\">Art preferences<h1>\n</header>\n<main>\n<form id=\"artPreferences\">\n<p class=\"paragraph\"> Some text</p>\n\n<div class=\"myDiv\">\n  <table>\n    <thead>\n      <tr>\n      </tr>\n    </thead>\n      <tr>\n        <td><img class=\"painting\"></td>\n        <td><img class=\"painting\"></td>\n      </tr>\n      <tr>\n        <td><button class=\"continueButton\" type=\"submit\" id=\"klee\" value=\"0\">Left</td>\n        <td><button class=\"continueButton\"type=\"submit\" id=\"kandinsky\" value=\"1\">Right</td>\n      </tr>\n  </table>\n</div>\n  \n  \n</form>\n</main>\n<footer>\n    \n</footer>",
+      "content": "<header>\n  <h1 class=\"h1\">Art preferences<h1>\n</header>\n<main>\n<form id=\"artPreferences\">\n<p class=\"paragraph\"> Some text</p>\n\n<div class=\"myDiv\">\n  <table>\n    <thead>\n      <tr>\n      </tr>\n    </thead>\n      <tr>\n        <td><img class=\"painting\"></td>\n        <td><img class=\"painting\"></td>\n      </tr>\n      <tr>\n        <td><button class=\"continueButton\" type=\"button\" id=\"klee\" value=\"0\">Left</td>\n        <td><button class=\"continueButton\"type=\"button\" id=\"kandinsky\" value=\"1\">Right</td>\n      </tr>\n  </table>\n</div>\n  \n  \n</form>\n</main>\n<footer>\n    \n</footer>",
       "scrollTop": true,
       "files": [],
       "responses": [
@@ -307,11 +307,11 @@
         {
           "title": "",
           "message": "run",
-          "code": "const left=this.parameters.klee;\r\nconst right=this.parameters.kandinsky;\r\nlet ds = this.options.datastore;\r\nlet artPreferences=parseInt(ds.get(\"artPreferences\")) || 0;\r\n\r\n\r\nimages=document.querySelectorAll(\".painting\")\r\nimages[0].src=left;\r\nimages[1].src=right;\r\n\r\ndocument.getElementsByClassName(\"continueButton\").forEach( (element) => \r\n        element.addEventListener(\"click\", (event)=> {\r\n                let choice = parseInt(event.target.value);\r\n                artPreferences+=choice;\r\n                ds.set(\"artPreferences\", artPreferences);\r\n                  event.target.submit(); \r\n        }));\r\n\r\n"
+          "code": "const left=this.parameters.klee;\r\nconst right=this.parameters.kandinsky;\r\nlet ds = this.options.datastore;\r\nlet artPreferences=parseInt(ds.get(\"artPreferences\")) || 0;\r\n\r\n\r\nimages=document.querySelectorAll(\".painting\")\r\nimages[0].src=left;\r\nimages[1].src=right;\r\n\r\ndocument.getElementsByClassName(\"continueButton\").forEach( (element) => \r\n        element.addEventListener(\"click\", (event)=> {\r\n                let choice = parseInt(event.target.value);\r\n                artPreferences+=choice;\r\n                ds.set(\"artPreferences\", artPreferences);\r\n                      this.end(); \r\n        }));\r\n\r\n"
         }
       ],
       "title": "kleeKandinsky",
-      "_tab": "Scripts"
+      "_tab": "Content"
     },
     "14": {
       "id": "14",
