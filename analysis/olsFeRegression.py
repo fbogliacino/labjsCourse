@@ -24,6 +24,14 @@ with open('ols_results.txt', 'w') as f:
 
 #now import the new data to estimate with Fixed Effects    
 data_fe = pd.read_excel('panelData.xlsx', sheet_name='panel')
-print(data_fe.head())
 
-# Fit the Fixed Effects regression model
+# de-mean the data
+mean_by_id = data_fe.groupby('iid').transform('mean', numeric_only=True)
+print(mean_by_id)
+print(data_fe)
+
+y_demeaned= data_fe['outcome'] - mean_by_id['outcome']
+D_demeaned = data_fe['D'] - mean_by_id['D']
+result_fe = sm.OLS(y_demeaned, sm.add_constant(D_demeaned)).fit(cov_type='cluster',
+    cov_kwds={'groups': data_fe['iid']})
+print(result_fe.summary())
