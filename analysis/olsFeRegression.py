@@ -6,7 +6,6 @@ import numpy as np
 import statsmodels.api as sm
 from statsmodels.formula.api import ols
 from linearmodels import PanelOLS 
-from fixedeffect import fixedeffect
 
 
 
