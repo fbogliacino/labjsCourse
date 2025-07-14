@@ -1,0 +1,94 @@
+{
+  "components": {
+    "1": {
+      "id": "1",
+      "type": "lab.html.Form",
+      "content": "<header>\n  <h1> Questionnaire</h1>\n</header>\n<main>\n<form id=\"questionnaire\">\n\n  <p style=\"text-align:justify;\">How do you describe yourself?</p>\n  <input id=\"gender1\" type=\"radio\" name=\"gender\" value=\"1\" required><label for=\"gender1\" class=\"labelInput\">Male </label><br>\n  <input id=\"gender2\" type=\"radio\" name=\"gender\" value=\"2\"><label for=\"gender2\"  class=\"labelInput\">Female </label><br>\n  <input id=\"gender3\" type=\"radio\" name=\"gender\" value=\"3\"><label for=\"gender3\"  class=\"labelInput\">Non binary/third gender </label><br>\n  <input id=\"gender4\" type=\"radio\" name=\"gender\" value=\"4\"><label for=\"gender4\"  class=\"labelInput\">Prefer to self-describe </label>\n  <input type=\"text\" name=\"gender_text\"><br>\n  <input id=\"gender5\"type=\"radio\" name=\"gender\" value=\"5\"><label for=\"gender5\">Prefer not to say </label><br>\n<!-- -->\n<p>How old are you?</p>\n<input id=\"age1\" type=\"radio\" name=\"ageRank\" value=\"1\" required><label for=\"age1\">Under 18 </label><br>\n<input id=\"age2\" type=\"radio\" name=\"ageRank\" value=\"2\" required><label for=\"age2\">18-24 years old </label><br>\n<input id=\"age3\" type=\"radio\" name=\"ageRank\" value=\"3\" required><label for=\"age3\">25-34 years old </label><br>\n<input id=\"age4\" type=\"radio\" name=\"ageRank\" value=\"4\" required><label for=\"age4\">35-44 years old</label><br>\n<input id=\"age5\" type=\"radio\" name=\"ageRank\" value=\"5\" required><label for=\"age5\">45-54 years old</label><br> \n<input id=\"age6\" type=\"radio\" name=\"ageRank\" value=\"5\" required><label for=\"age6\">55-64 years old</label><br> \n<input id=\"age7\" type=\"radio\" name=\"ageRank\" value=\"5\" required><label for=\"age7\">65+ years old </label><br> \n\n  \n</form>\n</main>\n<footer>\n  <button class=\"continueButton\" form=\"questionnaire\" type=\"submit\">Submit</button>\n</footer>",
+      "scrollTop": true,
+      "files": [],
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "messageHandlers": [
+        {
+          "title": "",
+          "message": "",
+          "code": ""
+        }
+      ],
+      "title": "Questionnaire"
+    },
+    "root": {
+      "id": "root",
+      "title": "root",
+      "type": "lab.flow.Sequence",
+      "children": [
+        "1"
+      ],
+      "parameters": [],
+      "plugins": [
+        {
+          "type": "lab.plugins.Metadata"
+        }
+      ],
+      "metadata": {
+        "title": "Lectures in Santiago",
+        "description": "Un breve curso sobre lab.js",
+        "repository": "https://github.com/fbogliacino/labjsCourse",
+        "contributors": "Francesco Bogliacino"
+      }
+    }
+  },
+  "version": [
+    20,
+    2,
+    4
+  ],
+  "files": {
+    "files": {
+      "index.html": {
+        "content": "data:text/html,%3C!doctype%20html%3E%0A%3Chtml%3E%0A%3Chead%3E%0A%20%20%3Cmeta%20charset%3D%22utf-8%22%3E%0A%20%20%3Ctitle%3EExperiment%3C%2Ftitle%3E%0A%20%20%3C!--%20viewport%20setup%20--%3E%0A%20%20%3Cmeta%20name%3D%22viewport%22%20content%3D%22width%3Ddevice-width%2C%20initial-scale%3D1%22%3E%0A%20%20%3C!--%20lab.js%20library%20and%20experiment%20code%20--%3E%0A%20%20%24%7B%20header%20%7D%0A%3C%2Fhead%3E%0A%3Cbody%3E%0A%20%20%3C!--%20If%20you'd%20rather%20have%20a%20container%20with%20a%20fixed%20width%0A%20%20%20%20%20%20%20and%20variable%20height%2C%20try%20removing%20the%20fullscreen%20class%20below%20--%3E%0A%20%20%3Cdiv%20class%3D%22container%20fullscreen%22%20data-labjs-section%3D%22main%22%3E%0A%20%20%20%20%3Cmain%20class%3D%22content-vertical-center%20content-horizontal-center%22%3E%0A%20%20%20%20%20%20%3Cdiv%3E%0A%20%20%20%20%20%20%20%20%3Ch2%3ELoading%20Experiment%3C%2Fh2%3E%0A%20%20%20%20%20%20%20%20%3Cp%3EThe%20experiment%20is%20loading%20and%20should%20start%20in%20a%20few%20seconds%3C%2Fp%3E%0A%20%20%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3C%2Fmain%3E%0A%20%20%3C%2Fdiv%3E%0A%3C%2Fbody%3E%0A%3C%2Fhtml%3E%0A",
+        "source": "library"
+      },
+      "style.css": {
+        "content": "data:text/css,%2F*%20Please%20define%20your%20custom%20styles%20here%20*%2F%0D%0Amain%7B%0D%0A%20%20margin-left%3A%20250px%3B%0D%0A%20%20margin-right%3A%20250px%3B%0D%0A%20%20background-color%3A%20white%3B%0D%0A%20%20text-align%3A%20justify%3B%0D%0A%7D%0D%0Aheader%7B%0D%0A%20%20background-color%3A%20%23232f3e%3B%0D%0A%20%20color%3A%20white%3B%0D%0A%7D%0D%0A.paragraph%7B%0D%0A%20%20text-align%3A%20justify%3B%0D%0A%20%20font-family%3A%20sans-serif%2C%20'Times%20New%20Roman'%2C%20Times%2C%20serif%3B%0D%0A%7D%0D%0Afooter%7B%0D%0A%20%20background-color%3A%20%23232f3e%3B%0D%0A%7D%0D%0A.labelInput%7B%0D%0A%20%20cursor%3A%20pointer%3B%0D%0A%7D%0D%0A.continueButton%7B%0D%0A%20%20cursor%3A%20pointer%3B%0D%0A%20%20background-color%3A%20yellow%3B%0D%0A%20%20border-radius%3A%2025px%3B%0D%0A%20%20color%3Ablack%3B%0D%0A%20%20width%3A%20125px%3B%0D%0A%7D",
+        "source": "library"
+      }
+    },
+    "bundledFiles": {
+      "lib/lab.js": {
+        "type": "application/javascript"
+      },
+      "lib/lab.js.map": {
+        "type": "text/plain"
+      },
+      "lib/lab.fallback.js": {
+        "type": "application/javascript"
+      },
+      "lib/lab.legacy.js": {
+        "type": "application/javascript"
+      },
+      "lib/lab.legacy.js.map": {
+        "type": "text/plain"
+      },
+      "lib/lab.css": {
+        "type": "text/css"
+      },
+      "lib/loading.svg": {
+        "type": "image/svg+xml"
+      }
+    }
+  }
+}
