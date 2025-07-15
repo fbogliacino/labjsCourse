@@ -66,11 +66,43 @@
       "title": "InformedConsent",
       "_tab": "Content"
     },
+    "3": {
+      "id": "3",
+      "type": "lab.html.Form",
+      "content": "<header>\n  <h1>Instructions </h1>\n</header>\n<main>\n<form id=\"comprehensionQuestion\">\n\n<p class=\"paragraph\" id=\"treatmentAssignment\">Remember you will be playing against </p>\n\n<p class=\"paragraph\">Here are the instructions on the MPL </p>\n\n<p class=\"paragraph\">If this task is selected for payment, how many rows will be paid? </p>\n<input type=\"radio\" name=\"cQ1\" value=\"1\" id=\"cQ1_1\" required><label class=\"labelInput\" for=\"cQ1_1\">1 row</label><br>\n<input type=\"radio\" name=\"cQ1\" value=\"2\" id=\"cQ1_2\"><label class=\"labelInput\" for=\"cQ1_2\">3 rows</label><br>\n<input type=\"radio\" name=\"cQ1\" value=\"3\" id=\"cQ1_3\"><label class=\"labelInput\" for=\"cQ1_3\">5 rows</label><br>\n<input type=\"radio\" name=\"cQ1\" value=\"4\" id=\"cQ1_4\"><label class=\"labelInput\" for=\"cQ1_4\">all rows</label><br>\n\n<p class=\"paragraph\" id=\"feedback\"> </p>\n\n</form>\n</main>\n<footer>\n    <button class=\"continueButton\" form=\"comprehensionQuestion\" type=\"submit\">Continue</button>\n</footer>",
+      "scrollTop": true,
+      "files": [],
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "messageHandlers": [
+        {
+          "title": "",
+          "message": "run",
+          "code": "const correctStatement=\"Correct!\";\r\nconst incorrectStatement=\"Incorrect!\";\r\nconst ingroupStatement = \"someone from your group.\";\r\nconst outgroupStatement = \"someone from the other group.\";\r\n\r\nlet feedback= document.getElementById('feedback');\r\nlet treatmentAssignment = document.getElementById('treatmentAssignment');\r\n\r\nlet draw=Math.random();\r\n\r\n//const var1=\"1\";\r\n//const var2=\"0\";\r\n\r\nif (draw < 0.5) {\r\n      feedback.textContent=correctStatement;\r\n      treatmentAssignment.insertAdjacentHTML('beforeend', ingroupStatement);\r\n      this.state.treatment=\"ingroup\";\r\n} else {\r\n    feedback.textContent=incorrectStatement;\r\n    treatmentAssignment.insertAdjacentHTML('beforeend', outgroupStatement);\r\n    this.state.treatment=\"outgroup\";\r\n};\r\n\r\n"
+        }
+      ],
+      "title": "mplQuestion",
+      "_tab": "Scripts"
+    },
     "root": {
       "id": "root",
       "title": "root",
       "type": "lab.flow.Sequence",
       "children": [
+        "3",
         "2",
         "1"
       ],
