@@ -69,7 +69,7 @@
     "3": {
       "id": "3",
       "type": "lab.html.Form",
-      "content": "<header>\n  <h1>Instructions </h1>\n</header>\n<main>\n<form id=\"comprehensionQuestion\">\n\n<p class=\"paragraph\" id=\"treatmentAssignment\">Remember you will be playing against </p>\n\n<p class=\"paragraph\">Here are the instructions on the MPL </p>\n\n<p class=\"paragraph\">If this task is selected for payment, how many rows will be paid? </p>\n<input type=\"radio\" name=\"cQ1\" value=\"1\" id=\"cQ1_1\" required><label class=\"labelInput\" for=\"cQ1_1\">1 row</label><br>\n<input type=\"radio\" name=\"cQ1\" value=\"2\" id=\"cQ1_2\"><label class=\"labelInput\" for=\"cQ1_2\">3 rows</label><br>\n<input type=\"radio\" name=\"cQ1\" value=\"3\" id=\"cQ1_3\"><label class=\"labelInput\" for=\"cQ1_3\">5 rows</label><br>\n<input type=\"radio\" name=\"cQ1\" value=\"4\" id=\"cQ1_4\"><label class=\"labelInput\" for=\"cQ1_4\">all rows</label><br>\n\n<p class=\"paragraph\" id=\"feedback\"> </p>\n\n</form>\n</main>\n<footer>\n    <button class=\"continueButton\" form=\"comprehensionQuestion\" type=\"submit\">Continue</button>\n</footer>",
+      "content": "<header>\n  <h1>Instructions </h1>\n</header>\n<main>\n<form id=\"comprehensionQuestion\">\n\n<p class=\"paragraph\" id=\"treatmentAssignment\">Remember you will be playing against </p>\n\n<p class=\"paragraph\">Here are the instructions on the MPL </p>\n\n<p class=\"paragraph\">If this task is selected for payment, how many rows will be paid? </p>\n<input type=\"radio\" name=\"cQ1\" value=\"1\" id=\"cQ1_1\" required><label class=\"labelInput\" for=\"cQ1_1\">1 row</label><br>\n<input type=\"radio\" name=\"cQ1\" value=\"2\" id=\"cQ1_2\"><label class=\"labelInput\" for=\"cQ1_2\">3 rows</label><br>\n<input type=\"radio\" name=\"cQ1\" value=\"3\" id=\"cQ1_3\"><label class=\"labelInput\" for=\"cQ1_3\">5 rows</label><br>\n<input type=\"radio\" name=\"cQ1\" value=\"4\" id=\"cQ1_4\"><label class=\"labelInput\" for=\"cQ1_4\">all rows</label><br>\n\n<p class=\"paragraph\" id=\"feedback\"> </p>\n\n</form>\n</main>\n<footer>\n    <button class=\"continueButton\" form=\"comprehensionQuestion\" type=\"submit\" disabled>Continue</button>\n</footer>",
       "scrollTop": true,
       "files": [],
       "responses": [
@@ -91,20 +91,82 @@
         {
           "title": "",
           "message": "run",
-          "code": "const correctStatement=\"Correct!\";\r\nconst incorrectStatement=\"Incorrect!\";\r\nconst ingroupStatement = \"someone from your group.\";\r\nconst outgroupStatement = \"someone from the other group.\";\r\n\r\nlet feedback= document.getElementById('feedback');\r\nlet treatmentAssignment = document.getElementById('treatmentAssignment');\r\n\r\nlet draw=Math.random();\r\n\r\n/*\r\nconst var1=\"1\";\r\nconst var2=1;\r\n\r\nif (var1===var2) {\r\n  treatmentAssignment.insertAdjacentHTML('beforeend', ingroupStatement);\r\n} else {\r\n  treatmentAssignment.insertAdjacentHTML('beforeend', outgroupStatement);\r\n}\r\n*/\r\n/*\r\nconst var1=\"10\";\r\nconst var2=\"9\";\r\n\r\nif (var1>var2) {\r\n  treatmentAssignment.insertAdjacentHTML('beforeend', ingroupStatement);\r\n} else {\r\n  treatmentAssignment.insertAdjacentHTML('beforeend', outgroupStatement);\r\n}\r\n*/\r\n\r\n/*\r\nconst var1=\"1\";\r\nconst var2=true;\r\n\r\nif (var1==var2) {\r\n  treatmentAssignment.insertAdjacentHTML('beforeend', ingroupStatement);\r\n} else {\r\n  treatmentAssignment.insertAdjacentHTML('beforeend', outgroupStatement);\r\n}\r\n*/\r\n\r\n\r\nif (draw < 0.5) {\r\n      feedback.textContent=correctStatement;\r\n      treatmentAssignment.insertAdjacentHTML('beforeend', ingroupStatement);\r\n      this.state.treatment=\"ingroup\";\r\n} else {\r\n    feedback.textContent=incorrectStatement;\r\n    treatmentAssignment.insertAdjacentHTML('beforeend', outgroupStatement);\r\n    this.state.treatment=\"outgroup\";\r\n};\r\n\r\n\r\n"
+          "code": "const correctStatement=\"Correct!\";\r\nconst incorrectStatement=\"Incorrect!\";\r\nconst ingroupStatement = \"someone from your group.\";\r\nconst outgroupStatement = \"someone from the other group.\";\r\n//const button = document.getElementsByTagName('button');\r\n//const button = document.getElementsByClassName('continueButton');\r\nconst button = document.querySelectorAll('.continueButton');\r\n\r\nconst ds = this.options.datastore;\r\n\r\nconst options = document.getElementsByTagName('input');\r\nconst option1 = document.getElementById('cQ1_1'); \r\nconst option2 = document.getElementById('cQ1_2'); \r\nconst option3 = document.getElementById('cQ1_3'); \r\nconst option4 = document.getElementById('cQ1_4'); \r\n\r\nlet feedback= document.getElementById('feedback');\r\n\r\noptions.forEach((element) => element.addEventListener('click', (event) => {\r\n                  let attempts= parseInt(ds.get('attemptsCQ')) || 0;\r\n                  attempts += 1;\r\n                  ds.set('attemptsCQ', attempts);\r\n        if (event.target.value==1) {\r\n                  feedback.textContent=correctStatement;\r\n                  button[0].disabled=false;\r\n        } else {\r\n                  feedback.textContent=correctStatement;\r\n                  button[0].disabled=true;\r\n        }\r\n}));\r\n\r\n/*\r\noption1.addEventListener('click', ()=> {\r\n        let attempts= ds.get('attemptsCQ') || 0;\r\n        attempts += 1;\r\n        ds.set('attemptsCQ', attempts);\r\n        feedback.textContent=correctStatement;\r\n        button[0].disabled=false;\r\n});\r\noption2.addEventListener('click', ()=> {\r\n        let attempts= ds.get('attemptsCQ') || 0;\r\n        attempts += 1;\r\n        ds.set('attemptsCQ', attempts);\r\n        feedback.textContent=incorrectStatement;\r\n        button[0].disabled=true;\r\n});\r\noption3.addEventListener('click', ()=> {\r\n        feedback.textContent=incorrectStatement;\r\n        let attempts= ds.get('attemptsCQ') || 0;\r\n        attempts += 1;\r\n        ds.set('attemptsCQ', attempts);\r\n        button[0].disabled=true;\r\n});\r\noption4.addEventListener('click', ()=> {\r\n        let attempts= ds.get('attemptsCQ') || 0;\r\n        attempts += 1;\r\n        ds.set('attemptsCQ', attempts);\r\n        feedback.textContent=incorrectStatement;\r\n        button[0].disabled=true;\r\n});\r\n*/\r\n\r\n/// let treatmentAssignment = document.getElementById('treatmentAssignment');\r\n\r\n///let draw=Math.random();\r\n\r\n\r\n\r\n\r\n/*\r\nconst var1=\"1\";\r\nconst var2=1;\r\n\r\nif (var1==var2) {\r\n  treatmentAssignment.insertAdjacentHTML('beforeend', ingroupStatement);\r\n} else {\r\n  treatmentAssignment.insertAdjacentHTML('beforeend', outgroupStatement);\r\n}\r\n*/\r\n/*\r\nconst var1=\"10\";\r\nconst var2=\"9\";\r\n\r\nif (var1>var2) {\r\n  treatmentAssignment.insertAdjacentHTML('beforeend', ingroupStatement);\r\n} else {\r\n  treatmentAssignment.insertAdjacentHTML('beforeend', outgroupStatement);\r\n}\r\n*/\r\n\r\n/*\r\nconst var1=\"1\";\r\nconst var2=true;\r\n\r\nif (var1===var2) {\r\n  treatmentAssignment.insertAdjacentHTML('beforeend', ingroupStatement);\r\n} else {\r\n  treatmentAssignment.insertAdjacentHTML('beforeend', outgroupStatement);\r\n}\r\n*/\r\n\r\n/*\r\nif (draw < 0.5) {\r\n      feedback.textContent=correctStatement;\r\n      treatmentAssignment.insertAdjacentHTML('beforeend', ingroupStatement);\r\n      this.state.treatment=\"ingroup\";\r\n} else {\r\n    feedback.textContent=incorrectStatement;\r\n    treatmentAssignment.insertAdjacentHTML('beforeend', outgroupStatement);\r\n    this.state.treatment=\"outgroup\";\r\n};\r\n*/\r\n\r\n"
         }
       ],
       "title": "mplQuestion",
-      "_tab": "Scripts"
+      "_tab": "Content"
+    },
+    "4": {
+      "id": "4",
+      "type": "lab.html.Form",
+      "content": "<header>\n  <h1>Instructions </h1>\n</header>\n<main>\n<form id=\"mplChoice\">\n\n<p class=\"paragraph\" id=\"treatmentAssignment\"></p>\n\n</form>\n</main>\n<footer>\n    <button class=\"continueButton\" form=\"mplChoice\" type=\"submit\" >Continue</button>\n</footer>",
+      "scrollTop": true,
+      "files": [],
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "messageHandlers": [
+        {
+          "title": "",
+          "message": "",
+          "code": ""
+        }
+      ],
+      "title": "MPL choice"
+    },
+    "5": {
+      "id": "5",
+      "type": "lab.flow.Sequence",
+      "children": [
+        "3",
+        "4"
+      ],
+      "files": [],
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "messageHandlers": [
+        {
+          "title": "",
+          "message": "",
+          "code": ""
+        }
+      ],
+      "title": "mplTask"
     },
     "root": {
       "id": "root",
       "title": "root",
       "type": "lab.flow.Sequence",
       "children": [
-        "3",
         "2",
-        "1"
+        "1",
+        "5"
       ],
       "parameters": [],
       "plugins": [
@@ -132,7 +194,7 @@
         "source": "library"
       },
       "style.css": {
-        "content": "data:text/css,%2F*%20Please%20define%20your%20custom%20styles%20here%20*%2F%0D%0Amain%7B%0D%0A%20%20margin-left%3A%20250px%3B%0D%0A%20%20margin-right%3A%20250px%3B%0D%0A%20%20background-color%3A%20white%3B%0D%0A%20%20text-align%3A%20justify%3B%0D%0A%20%20line-height%3A%202%3B%0D%0A%20%20padding-left%3A%2010px%3B%0D%0A%7D%0D%0Aheader%7B%0D%0A%20%20background-color%3A%20%23232f3e%3B%0D%0A%20%20color%3A%20white%3B%0D%0A%20%20%20%20margin-left%3A%20250px%3B%0D%0A%20%20margin-right%3A%20250px%3B%0D%0A%7D%0D%0A.paragraph%7B%0D%0A%20%20text-align%3A%20justify%3B%0D%0A%20%20font-family%3A%20sans-serif%2C%20'Times%20New%20Roman'%2C%20Times%2C%20serif%3B%0D%0A%7D%0D%0Afooter%7B%0D%0A%20%20background-color%3A%20%23232f3e%3B%0D%0A%20%20%20%20margin-left%3A%20250px%3B%0D%0A%20%20margin-right%3A%20250px%3B%0D%0A%7D%0D%0A.labelInput%7B%0D%0A%20%20cursor%3A%20pointer%3B%0D%0A%20%20font-family%3A%20Georgia%2C%20'Times%20New%20Roman'%2C%20Times%2C%20serif%3B%0D%0A%20%20font-size%3A%2012pt%3B%0D%0A%7D%0D%0A.continueButton%7B%0D%0A%20%20cursor%3A%20pointer%3B%0D%0A%20%20background-color%3A%20yellow%3B%0D%0A%20%20border-radius%3A%2025px%3B%0D%0A%20%20color%3Ablack%3B%0D%0A%20%20width%3A%20200px%3B%0D%0A%20%20padding%3A%2012px%200%3B%0D%0A%20%20font-family%3A%20Georgia%2C%20'Times%20New%20Roman'%2C%20Times%2C%20serif%3B%0D%0A%20%20font-size%3A%2014pt%3B%0D%0A%7D%0D%0A.continueButton%3Adisabled%7B%0D%0A%20%20cursor%3A%20not-allowed%3B%0D%0A%20%20background-color%3A%20yellow%3B%0D%0A%20%20border-radius%3A%2025px%3B%0D%0A%20%20color%3Ablack%3B%0D%0A%20%20width%3A%20200px%3B%0D%0A%20%20padding%3A%2012px%200%3B%0D%0A%20%20font-family%3A%20Georgia%2C%20'Times%20New%20Roman'%2C%20Times%2C%20serif%3B%0D%0A%20%20font-size%3A%2014pt%3B%0D%0A%7D%0D%0A.myContainer%7B%0D%0A%20%20border%3A%202pt%20solid%20black%3B%0D%0A%20%20position%3A%20absolute%3B%0D%0A%20%20bottom%3A%20auto%3B%0D%0A%20%20left%3A50%25%3B%0D%0A%20%20transform%3A%20translateX(-50%25)%3B%0D%0A%20%20padding%3A%2010px%2010px%2010px%2010px%3B%0D%0A%7D%0D%0A.iframeObject%7B%0D%0A%20%20width%3A600px%3B%0D%0A%20%20height%3A%20400px%3B%0D%0A%20%20position%3A%20relative%3B%0D%0A%20%20left%3A%2050%25%3B%0D%0A%20%20%20%20transform%3A%20translateX(-50%25)%3B%0D%0A%7D",
+        "content": "data:text/css,%2F*%20Please%20define%20your%20custom%20styles%20here%20*%2F%0D%0Amain%7B%0D%0A%20%20margin-left%3A%20250px%3B%0D%0A%20%20margin-right%3A%20250px%3B%0D%0A%20%20background-color%3A%20white%3B%0D%0A%20%20text-align%3A%20justify%3B%0D%0A%20%20line-height%3A%202%3B%0D%0A%20%20padding-left%3A%2010px%3B%0D%0A%7D%0D%0Aheader%7B%0D%0A%20%20background-color%3A%20%23232f3e%3B%0D%0A%20%20color%3A%20white%3B%0D%0A%20%20%20%20margin-left%3A%20250px%3B%0D%0A%20%20margin-right%3A%20250px%3B%0D%0A%7D%0D%0A.paragraph%7B%0D%0A%20%20text-align%3A%20justify%3B%0D%0A%20%20font-family%3A%20sans-serif%2C%20'Times%20New%20Roman'%2C%20Times%2C%20serif%3B%0D%0A%7D%0D%0Afooter%7B%0D%0A%20%20background-color%3A%20%23232f3e%3B%0D%0A%20%20%20%20margin-left%3A%20250px%3B%0D%0A%20%20margin-right%3A%20250px%3B%0D%0A%7D%0D%0A.labelInput%7B%0D%0A%20%20cursor%3A%20pointer%3B%0D%0A%20%20font-family%3A%20Georgia%2C%20'Times%20New%20Roman'%2C%20Times%2C%20serif%3B%0D%0A%20%20font-size%3A%2012pt%3B%0D%0A%7D%0D%0A.continueButton%7B%0D%0A%20%20cursor%3A%20pointer%3B%0D%0A%20%20background-color%3A%20yellow%3B%0D%0A%20%20border-radius%3A%2025px%3B%0D%0A%20%20color%3Ablack%3B%0D%0A%20%20width%3A%20200px%3B%0D%0A%20%20padding%3A%2012px%200%3B%0D%0A%20%20font-family%3A%20Georgia%2C%20'Times%20New%20Roman'%2C%20Times%2C%20serif%3B%0D%0A%20%20font-size%3A%2014pt%3B%0D%0A%7D%0D%0A.continueButton%3Adisabled%7B%0D%0A%20%20cursor%3A%20not-allowed%3B%0D%0A%20%20background-color%3A%20yellow%3B%0D%0A%20%20border-radius%3A%2025px%3B%0D%0A%20%20color%3Ablack%3B%0D%0A%20%20width%3A%20200px%3B%0D%0A%20%20padding%3A%2012px%200%3B%0D%0A%20%20font-family%3A%20Georgia%2C%20'Times%20New%20Roman'%2C%20Times%2C%20serif%3B%0D%0A%20%20font-size%3A%2014pt%3B%0D%0A%20%20opacity%3A%200.6%3B%0D%0A%7D%0D%0A.myContainer%7B%0D%0A%20%20border%3A%202pt%20solid%20black%3B%0D%0A%20%20position%3A%20absolute%3B%0D%0A%20%20bottom%3A%20auto%3B%0D%0A%20%20left%3A50%25%3B%0D%0A%20%20transform%3A%20translateX(-50%25)%3B%0D%0A%20%20padding%3A%2010px%2010px%2010px%2010px%3B%0D%0A%7D%0D%0A.iframeObject%7B%0D%0A%20%20width%3A600px%3B%0D%0A%20%20height%3A%20400px%3B%0D%0A%20%20position%3A%20relative%3B%0D%0A%20%20left%3A%2050%25%3B%0D%0A%20%20%20%20transform%3A%20translateX(-50%25)%3B%0D%0A%7D",
         "source": "library"
       },
       "embedded/6686a160a001e8b49649864b187edd7276ea4b7a8d9e5ed14110b95e5cd9130d.pdf": {
