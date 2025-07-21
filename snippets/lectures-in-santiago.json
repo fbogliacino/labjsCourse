@@ -3,7 +3,7 @@
     "1": {
       "id": "1",
       "type": "lab.html.Form",
-      "content": "<header>\n  <h1> Questionnaire</h1>\n</header>\n<main>\n<form id=\"questionnaire\">\n\n  <p class=\"paragraph\"><b>How do you describe yourself?</b></p>\n  <input id=\"gender1\" type=\"radio\" name=\"gender\" value=\"1\" required><label for=\"gender1\" class=\"labelInput\">Male </label><br>\n  <input id=\"gender2\" type=\"radio\" name=\"gender\" value=\"2\"><label for=\"gender2\"  class=\"labelInput\">Female </label><br>\n  <input id=\"gender3\" type=\"radio\" name=\"gender\" value=\"3\"><label for=\"gender3\"  class=\"labelInput\">Non binary/third gender </label><br>\n  <input id=\"gender4\" type=\"radio\" name=\"gender\" value=\"4\"><label for=\"gender4\"  class=\"labelInput\">Prefer to self-describe </label>\n  <input id=\"selfDescribe\" type=\"text\" name=\"gender_text\" disabled><br>\n  <input id=\"gender5\"type=\"radio\" name=\"gender\" value=\"5\"><label for=\"gender5\" class=\"labelInput\">Prefer not to say </label><br>\n<!-- -->\n<p class=\"paragraph\"><b>How old are you?</b></p>\n<input id=\"age1\" type=\"radio\" name=\"ageRank\" value=\"1\" required><label for=\"age1\" class=\"labelInput\">Under 18 </label><br>\n<input id=\"age2\" type=\"radio\" name=\"ageRank\" value=\"2\" required><label for=\"age2\" class=\"labelInput\">18-24 years old </label><br>\n<input id=\"age3\" type=\"radio\" name=\"ageRank\" value=\"3\" required><label for=\"age3\" class=\"labelInput\">25-34 years old </label><br>\n<input id=\"age4\" type=\"radio\" name=\"ageRank\" value=\"4\" required><label for=\"age4\" class=\"labelInput\">35-44 years old</label><br>\n<input id=\"age5\" type=\"radio\" name=\"ageRank\" value=\"5\" required><label for=\"age5\" class=\"labelInput\">45-54 years old</label><br> \n<input id=\"age6\" type=\"radio\" name=\"ageRank\" value=\"5\" required><label for=\"age6\" class=\"labelInput\">55-64 years old</label><br> \n<input id=\"age7\" type=\"radio\" name=\"ageRank\" value=\"5\" required><label for=\"age7\" class=\"labelInput\">65+ years old </label><br> \n\n  \n</form>\n</main>\n<footer>\n  <button class=\"continueButton\" form=\"questionnaire\" type=\"submit\">Submit</button>\n</footer>",
+      "content": "<header>\n  <h1> Questionnaire</h1>\n</header>\n<main>\n<form id=\"questionnaire\">\n          <div class=\"overlay\" id=\"overlay\"></div>\n              <div class=\"popupDialog\" id=\"popupDialog\">\n                    <p class=\"popupContainer\" id=\"popupContainer\"></p>\n              <button id=\"closePopUp\">x</button>\n          </div>\n\n  <p class=\"paragraph\"><b>How do you describe yourself?</b></p>\n  <input id=\"gender1\" type=\"radio\" name=\"gender\" value=\"1\" required><label for=\"gender1\" class=\"labelInput\">Male </label><br>\n  <input id=\"gender2\" type=\"radio\" name=\"gender\" value=\"2\"><label for=\"gender2\"  class=\"labelInput\">Female </label><br>\n  <input id=\"gender3\" type=\"radio\" name=\"gender\" value=\"3\"><label for=\"gender3\"  class=\"labelInput\">Non binary/third gender </label> <span class=\"infoIcon\" id=\"infoIcon\">&#9432;</span><br>\n  <input id=\"gender4\" type=\"radio\" name=\"gender\" value=\"4\"><label for=\"gender4\"  class=\"labelInput\">Prefer to self-describe </label>\n  <input id=\"selfDescribe\" type=\"text\" name=\"gender_text\" disabled><br>\n  <input id=\"gender5\"type=\"radio\" name=\"gender\" value=\"5\"><label for=\"gender5\" class=\"labelInput\">Prefer not to say </label><br>\n<!-- -->\n<p class=\"paragraph\"><b>How old are you?</b></p>\n<input id=\"age1\" type=\"radio\" name=\"ageRank\" value=\"1\" required><label for=\"age1\" class=\"labelInput\">Under 18 </label><br>\n<input id=\"age2\" type=\"radio\" name=\"ageRank\" value=\"2\" required><label for=\"age2\" class=\"labelInput\">18-24 years old </label><br>\n<input id=\"age3\" type=\"radio\" name=\"ageRank\" value=\"3\" required><label for=\"age3\" class=\"labelInput\">25-34 years old </label><br>\n<input id=\"age4\" type=\"radio\" name=\"ageRank\" value=\"4\" required><label for=\"age4\" class=\"labelInput\">35-44 years old</label><br>\n<input id=\"age5\" type=\"radio\" name=\"ageRank\" value=\"5\" required><label for=\"age5\" class=\"labelInput\">45-54 years old</label><br> \n<input id=\"age6\" type=\"radio\" name=\"ageRank\" value=\"5\" required><label for=\"age6\" class=\"labelInput\">55-64 years old</label><br> \n<input id=\"age7\" type=\"radio\" name=\"ageRank\" value=\"5\" required><label for=\"age7\" class=\"labelInput\">65+ years old </label><br> \n\n  \n</form>\n</main>\n<footer>\n  <button class=\"continueButton\" form=\"questionnaire\" type=\"submit\">Submit</button>\n</footer>",
       "scrollTop": true,
       "files": [],
       "responses": [
@@ -25,7 +25,7 @@
         {
           "title": "",
           "message": "run",
-          "code": "const gender=document.querySelectorAll('input[name=\"gender\"]');\r\nconst selfDescribe = document.getElementById('selfDescribe');\r\ngender.forEach((element) => element.addEventListener('click', (event) => {\r\n  if(event.target.value===\"4\") {\r\n    selfDescribe.disabled= false;\r\n  } else {\r\n    selfDescribe.disabled=true;\r\n  };\r\n}));"
+          "code": "const overlay = document.getElementById('overlay');\r\nconst popupDialog = document.getElementById('popupDialog');\r\nconst closePopUp = document.getElementById('closePopUp');\r\nconst infoIcon = document.getElementById('infoIcon');\r\nconst popupContainer = document.getElementById('popupContainer');\r\n\r\nconst gender=document.querySelectorAll('input[name=\"gender\"]');\r\nconst selfDescribe = document.getElementById('selfDescribe');\r\ngender.forEach((element) => element.addEventListener('click', (event) => {\r\n  if(event.target.value===\"4\") {\r\n    selfDescribe.disabled= false;\r\n  } else {\r\n    selfDescribe.value=\"\";\r\n    selfDescribe.disabled=true;\r\n  };\r\n}));\r\n\r\ninfoIcon.addEventListener('click', ()=>{\r\n                popupDialog.style.display = \"block\";\r\n                popupContainer.textContent =\"Beyond 0 and 1\"\r\n                overlay.style.display = \"block\";\r\n});\r\n\r\nclosePopUp.addEventListener(\"click\", ()=>{\r\n                popupDialog.style.display = \"none\";\r\n                popupContainer.textContent = \"&nbsp;\"\r\n                overlay.style.display = \"none\";\r\n    });"
         }
       ],
       "title": "Questionnaire",
@@ -127,7 +127,7 @@
         }
       ],
       "title": "MPL choice",
-      "_tab": "Content"
+      "_tab": "Scripts"
     },
     "5": {
       "id": "5",
@@ -195,7 +195,7 @@
     "7": {
       "id": "7",
       "type": "lab.html.Form",
-      "content": "<header>\n   <h1>This is your <tag id=\"round\"></tag> decision </h1>\n</header>\n<main>\n<form id=\"trustChoice\">\n\n<p class=\"paragraph\"></p>\n\n</form>\n</main>\n<footer>\n    <button class=\"continueButton\" form=\"trustChoice\" type=\"submit\" >Continue</button>\n</footer>",
+      "content": "<header>\n   <h1>This is your <tag id=\"round\"></tag> decision </h1>\n</header>\n<main>\n<form id=\"trustInstructions\">\n\n<p class=\"paragraph\"></p>\n\n</form>\n</main>\n<footer>\n    <button class=\"continueButton\" form=\"trustInstructions\" type=\"submit\" >Continue</button>\n</footer>",
       "scrollTop": true,
       "files": [],
       "responses": [
@@ -221,7 +221,7 @@
         }
       ],
       "title": "instructions",
-      "_tab": "Scripts"
+      "_tab": "Content"
     },
     "8": {
       "id": "8",
@@ -485,7 +485,8 @@
       "id": "15",
       "type": "lab.flow.Sequence",
       "children": [
-        "7"
+        "7",
+        "16"
       ],
       "files": [],
       "responses": [
@@ -510,7 +511,37 @@
           "code": ""
         }
       ],
-      "title": "Sequence"
+      "title": "trustTask"
+    },
+    "16": {
+      "id": "16",
+      "type": "lab.html.Form",
+      "content": "<header>\n   <h1>Now make your decision </h1>\n</header>\n<main>\n<form id=\"trustChoice\">\n\n<p class=\"paragraph\"></p>\n\n</form>\n</main>\n<footer>\n    <button class=\"continueButton\" form=\"trustChoice\" type=\"submit\" >Continue</button>\n</footer>",
+      "scrollTop": true,
+      "files": [],
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "messageHandlers": [
+        {
+          "title": "",
+          "message": "",
+          "code": ""
+        }
+      ],
+      "title": "choice"
     },
     "root": {
       "id": "root",
@@ -550,7 +581,7 @@
         "source": "library"
       },
       "style.css": {
-        "content": "data:text/css,%2F*%20Please%20define%20your%20custom%20styles%20here%20*%2F%0D%0Amain%7B%0D%0A%20%20margin-left%3A%20250px%3B%0D%0A%20%20margin-right%3A%20250px%3B%0D%0A%20%20background-color%3A%20white%3B%0D%0A%20%20text-align%3A%20justify%3B%0D%0A%20%20line-height%3A%202%3B%0D%0A%20%20padding-left%3A%2010px%3B%0D%0A%7D%0D%0Aheader%7B%0D%0A%20%20background-color%3A%20%23232f3e%3B%0D%0A%20%20color%3A%20white%3B%0D%0A%20%20%20%20margin-left%3A%20250px%3B%0D%0A%20%20margin-right%3A%20250px%3B%0D%0A%7D%0D%0A.paragraph%7B%0D%0A%20%20text-align%3A%20justify%3B%0D%0A%20%20font-family%3A%20sans-serif%2C%20'Times%20New%20Roman'%2C%20Times%2C%20serif%3B%0D%0A%7D%0D%0Afooter%7B%0D%0A%20%20background-color%3A%20%23232f3e%3B%0D%0A%20%20%20%20margin-left%3A%20250px%3B%0D%0A%20%20margin-right%3A%20250px%3B%0D%0A%7D%0D%0A.labelInput%7B%0D%0A%20%20cursor%3A%20pointer%3B%0D%0A%20%20font-family%3A%20Georgia%2C%20'Times%20New%20Roman'%2C%20Times%2C%20serif%3B%0D%0A%20%20font-size%3A%2012pt%3B%0D%0A%7D%0D%0A.continueButton%7B%0D%0A%20%20cursor%3A%20pointer%3B%0D%0A%20%20background-color%3A%20yellow%3B%0D%0A%20%20border-radius%3A%2025px%3B%0D%0A%20%20color%3Ablack%3B%0D%0A%20%20width%3A%20200px%3B%0D%0A%20%20padding%3A%2012px%200%3B%0D%0A%20%20font-family%3A%20Georgia%2C%20'Times%20New%20Roman'%2C%20Times%2C%20serif%3B%0D%0A%20%20font-size%3A%2014pt%3B%0D%0A%7D%0D%0A.continueButton%3Adisabled%7B%0D%0A%20%20cursor%3A%20not-allowed%3B%0D%0A%20%20background-color%3A%20yellow%3B%0D%0A%20%20border-radius%3A%2025px%3B%0D%0A%20%20color%3Ablack%3B%0D%0A%20%20width%3A%20200px%3B%0D%0A%20%20padding%3A%2012px%200%3B%0D%0A%20%20font-family%3A%20Georgia%2C%20'Times%20New%20Roman'%2C%20Times%2C%20serif%3B%0D%0A%20%20font-size%3A%2014pt%3B%0D%0A%20%20opacity%3A%200.6%3B%0D%0A%7D%0D%0A.myContainer%7B%0D%0A%20%20border%3A%202pt%20solid%20black%3B%0D%0A%20%20position%3A%20absolute%3B%0D%0A%20%20bottom%3A%20auto%3B%0D%0A%20%20left%3A50%25%3B%0D%0A%20%20transform%3A%20translateX(-50%25)%3B%0D%0A%20%20padding%3A%2010px%2010px%2010px%2010px%3B%0D%0A%7D%0D%0A.iframeObject%7B%0D%0A%20%20width%3A600px%3B%0D%0A%20%20height%3A%20400px%3B%0D%0A%20%20position%3A%20relative%3B%0D%0A%20%20left%3A%2050%25%3B%0D%0A%20%20%20%20transform%3A%20translateX(-50%25)%3B%0D%0A%7D%0D%0A.myDiv%7B%0D%0A%20%20background-color%3A%20blueviolet%3B%0D%0A%20%20margin%3A%20auto%3B%20%20%0D%0A%20%20width%3A%20900px%3B%0D%0A%20%20text-align%3A%20center%3B%0D%0A%7D%0D%0A.painting%7B%0D%0A%20%20width%3A%20250px%3B%0D%0A%20%20height%3A%20200px%3B%0D%0A%7D%0D%0A.checkmark%20%7B%0D%0A%20%20%20%20%20%20%20%20%20%20background-color%3A%20whitesmoke%3B%0D%0A%20%20%20%20%20%20%20%20%7D%0D%0Acanvas%20%7B%0D%0A%20%20%20%20%20%20border%3A%201px%20solid%20black%3B%0D%0A%20%20%20%20%20%20display%3A%20block%3B%0D%0A%20%20%20%20%20%20margin%3A%2020px%20auto%3B%0D%0A%20%20%20%20%20%20background-color%3A%20%23f0f0f0%3B%0D%0A%20%20%20%20%7D%20%20%20%20%20%20%20%20%0D%0A",
+        "content": "data:text/css,%2F*%20Please%20define%20your%20custom%20styles%20here%20*%2F%0D%0Amain%7B%0D%0A%20%20margin-left%3A%20250px%3B%0D%0A%20%20margin-right%3A%20250px%3B%0D%0A%20%20background-color%3A%20white%3B%0D%0A%20%20text-align%3A%20justify%3B%0D%0A%20%20line-height%3A%202%3B%0D%0A%20%20padding-left%3A%2010px%3B%0D%0A%7D%0D%0Aheader%7B%0D%0A%20%20background-color%3A%20%23232f3e%3B%0D%0A%20%20color%3A%20white%3B%0D%0A%20%20%20%20margin-left%3A%20250px%3B%0D%0A%20%20margin-right%3A%20250px%3B%0D%0A%7D%0D%0A.paragraph%7B%0D%0A%20%20text-align%3A%20justify%3B%0D%0A%20%20font-family%3A%20sans-serif%2C%20'Times%20New%20Roman'%2C%20Times%2C%20serif%3B%0D%0A%7D%0D%0Afooter%7B%0D%0A%20%20background-color%3A%20%23232f3e%3B%0D%0A%20%20%20%20margin-left%3A%20250px%3B%0D%0A%20%20margin-right%3A%20250px%3B%0D%0A%7D%0D%0A.labelInput%7B%0D%0A%20%20cursor%3A%20pointer%3B%0D%0A%20%20font-family%3A%20Georgia%2C%20'Times%20New%20Roman'%2C%20Times%2C%20serif%3B%0D%0A%20%20font-size%3A%2012pt%3B%0D%0A%7D%0D%0A.continueButton%7B%0D%0A%20%20cursor%3A%20pointer%3B%0D%0A%20%20background-color%3A%20yellow%3B%0D%0A%20%20border-radius%3A%2025px%3B%0D%0A%20%20color%3Ablack%3B%0D%0A%20%20width%3A%20200px%3B%0D%0A%20%20padding%3A%2012px%200%3B%0D%0A%20%20font-family%3A%20Georgia%2C%20'Times%20New%20Roman'%2C%20Times%2C%20serif%3B%0D%0A%20%20font-size%3A%2014pt%3B%0D%0A%7D%0D%0A.continueButton%3Adisabled%7B%0D%0A%20%20cursor%3A%20not-allowed%3B%0D%0A%20%20background-color%3A%20yellow%3B%0D%0A%20%20border-radius%3A%2025px%3B%0D%0A%20%20color%3Ablack%3B%0D%0A%20%20width%3A%20200px%3B%0D%0A%20%20padding%3A%2012px%200%3B%0D%0A%20%20font-family%3A%20Georgia%2C%20'Times%20New%20Roman'%2C%20Times%2C%20serif%3B%0D%0A%20%20font-size%3A%2014pt%3B%0D%0A%20%20opacity%3A%200.6%3B%0D%0A%7D%0D%0A.myContainer%7B%0D%0A%20%20border%3A%202pt%20solid%20black%3B%0D%0A%20%20position%3A%20absolute%3B%0D%0A%20%20bottom%3A%20auto%3B%0D%0A%20%20left%3A50%25%3B%0D%0A%20%20transform%3A%20translateX(-50%25)%3B%0D%0A%20%20padding%3A%2010px%2010px%2010px%2010px%3B%0D%0A%7D%0D%0A.iframeObject%7B%0D%0A%20%20width%3A600px%3B%0D%0A%20%20height%3A%20400px%3B%0D%0A%20%20position%3A%20relative%3B%0D%0A%20%20left%3A%2050%25%3B%0D%0A%20%20%20%20transform%3A%20translateX(-50%25)%3B%0D%0A%7D%0D%0A.myDiv%7B%0D%0A%20%20background-color%3A%20blueviolet%3B%0D%0A%20%20margin%3A%20auto%3B%20%20%0D%0A%20%20width%3A%20900px%3B%0D%0A%20%20text-align%3A%20center%3B%0D%0A%7D%0D%0A.painting%7B%0D%0A%20%20width%3A%20250px%3B%0D%0A%20%20height%3A%20200px%3B%0D%0A%7D%0D%0A.checkmark%20%7B%0D%0A%20%20%20%20%20%20%20%20%20%20background-color%3A%20whitesmoke%3B%0D%0A%20%20%20%20%20%20%20%20%7D%0D%0Acanvas%20%7B%0D%0A%20%20%20%20%20%20border%3A%201px%20solid%20black%3B%0D%0A%20%20%20%20%20%20display%3A%20block%3B%0D%0A%20%20%20%20%20%20margin%3A%2020px%20auto%3B%0D%0A%20%20%20%20%20%20background-color%3A%20%23f0f0f0%3B%0D%0A%20%20%20%20%7D%20%20%20%0D%0A.popupDialog%20%7B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20display%3A%20none%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20position%3A%20fixed%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20top%3A%2050%25%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20left%3A%2050%25%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20transform%3A%20translate(-50%25%2C%20-50%25)%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20padding%3A%2020px%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20background-color%3A%20%23fff%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20border%3A%201px%20solid%20%23ccc%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20box-shadow%3A%200%204px%208px%20rgba(0%2C%200%2C%200%2C%200.1)%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20z-index%3A%201000%3B%0D%0A%20%20%20%20%20%20%20%20%7D%0D%0A.popupDialog%20.closePopUp%20%7B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20cursor%3A%20pointer%3B%0D%0A%20%20%20%20%20%20%20%20%7D%20%20%20%20%20%20%20%20%20%0D%0A.overlay%20%7B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20display%3A%20none%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20position%3A%20fixed%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20top%3A%200%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20left%3A%200%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20width%3A%20100%25%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20height%3A%20100%25%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20background%3A%20rgba(0%2C%200%2C%200%2C%200.5)%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20z-index%3A%20999%3B%0D%0A%20%20%20%20%20%20%20%20%7D%0D%0A.infoIcon%20%7B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20cursor%3A%20pointer%3B%0D%0A%7D%20%20%20%0D%0A.popupContainer%20%7B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20background-color%3A%20%23dce8e9fe%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20padding%3A%2010px%2010px%3B%0D%0A%20%20%20%20%20%20%20%20%7D%20%20%20%20%20",
         "source": "library"
       },
       "embedded/6686a160a001e8b49649864b187edd7276ea4b7a8d9e5ed14110b95e5cd9130d.pdf": {
