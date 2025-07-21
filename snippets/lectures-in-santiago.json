@@ -101,7 +101,7 @@
     "4": {
       "id": "4",
       "type": "lab.html.Form",
-      "content": "<header>\n  <h1>Instructions </h1>\n</header>\n<main>\n<form id=\"mplChoice\">\n\n<p class=\"paragraph\" id=\"treatmentAssignment\"></p>\n\n</form>\n</main>\n<footer>\n    <button class=\"continueButton\" form=\"mplChoice\" type=\"submit\" >Continue</button>\n</footer>",
+      "content": "<header>\n  <h1>Instructions </h1>\n</header>\n<main>\n<form id=\"mplChoice\">\n\n<div class=\"myDiv\">\n<table>\n  <thead>\n    <tr>\n      <td></td><td><strong>Left option</strong></td><td><strong>Right option</strong></td><td></td>\n    </tr>\n  </thead> \n      <tr>\n      <td><label class=\"labelInputs\" for=\"MDG0_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input required id=\"MDG0_l\" name=\"MPL0\" type=\"radio\" value=\"1\"></td><td><input id=\"MDG0_r\" name=\"MPL0\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG0_r\"><strong>0</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInputs\" for=\"MDG1_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input required id=\"MDG1_l\" name=\"MPL1\" type=\"radio\" value=\"1\" ></td><td><input id=\"MDG1_r\" name=\"MPL1\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG1_r\"><strong>1</strong> for <strong>You</strong>, <strong>1</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInputs\" for=\"MDG2_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input required id=\"MDG2_l\" name=\"MPL2\" type=\"radio\" value=\"1\" ></td><td><input id=\"MDG2_r\" name=\"MPL2\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG2_r\"><strong>2</strong> for <strong>You</strong>, <strong>2</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInputs\" for=\"MDG3_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input required id=\"MDG3_l\" name=\"MPL3\" type=\"radio\" value=\"1\" ></td><td><input id=\"MDG3_r\" name=\"MPL3\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG3_r\"><strong>3</strong> for <strong>You</strong>, <strong>3</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInputs\" for=\"MDG4_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input required id=\"MDG4_l\" name=\"MPL4\" type=\"radio\" value=\"1\" ></td><td><input id=\"MDG4_r\" name=\"MPL4\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG4_r\"><strong>4</strong> for <strong>You</strong>, <strong>4</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInputs\" for=\"MDG5_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input required id=\"MDG5_l\" name=\"MPL5\" type=\"radio\" value=\"1\" ></td><td><input id=\"MDG5_r\" name=\"MPL5\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG5_r\"><strong>5</strong> for <strong>You</strong>, <strong>5</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInputs\" for=\"MDG6_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input required id=\"MDG6_l\" name=\"MPL6\" type=\"radio\" value=\"1\" ></td><td><input id=\"MDG6_r\" name=\"MPL6\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG6_r\"><strong>6</strong> for <strong>You</strong>, <strong>6</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInputs\" for=\"MDG7_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input required id=\"MDG7_l\" name=\"MPL7\" type=\"radio\" value=\"1\" ></td><td><input id=\"MDG7_r\" name=\"MPL7\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG7_r\"><strong>7</strong> for <strong>You</strong>, <strong>7</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInputs\" for=\"MDG8_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input required id=\"MDG8_l\" name=\"MPL8\" type=\"radio\" value=\"1\" ></td><td><input id=\"MDG8_r\" name=\"MPL8\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG8_r\"><strong>8</strong> for <strong>You</strong>, <strong>8</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInputs\" for=\"MDG9_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input required id=\"MDG9_l\" name=\"MPL9\" type=\"radio\" value=\"1\" ></td><td><input id=\"MDG9_r\" name=\"MPL9\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG9_r\"><strong>9</strong> for <strong>You</strong>, <strong>9</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInputs\" for=\"MDG10_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input required id=\"MDG10_l\" name=\"MPL10\" type=\"radio\" value=\"1\" ></td><td><input id=\"MDG10_r\" name=\"MPL10\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG10_r\"><strong>10</strong> for <strong>You</strong>, <strong>10</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInputs\" for=\"MDG11_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input required id=\"MDG11_l\" name=\"MPL11\" type=\"radio\" value=\"1\" ></td><td><input id=\"MDG11_r\" name=\"MPL11\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInputs\" for=\"MDG11_r\"><strong>11</strong> for <strong>You</strong>, <strong>11</strong> for <strong>Other</strong></label></td>\n    </tr>\n</table>\n</div>\n</form>\n</main>\n<footer>\n    <button class=\"continueButton\" form=\"mplChoice\" type=\"submit\" >Continue</button>\n</footer>",
       "scrollTop": true,
       "files": [],
       "responses": [
@@ -122,11 +122,12 @@
       "messageHandlers": [
         {
           "title": "",
-          "message": "",
-          "code": ""
+          "message": "run",
+          "code": "const radios = document.getElementsByTagName('input');\r\nconst inputs = document.getElementsByTagName('input');\r\n\r\n\r\n\r\nfor (let i=0; i<radios.length; i++) {\r\n  radios[i].addEventListener('click', (event) => {\r\n                if(event.target.value==2) {\r\n                      for (let j=0; j<i; j++) {\r\n                        if (inputs[j].value==1 && j<(i-1)) {\r\n                                inputs[j].checked=true;\r\n                        } else {\r\n                                inputs[j].checked=false;\r\n                        }\r\n                      }\r\n                      for (let k=i+1; k<radios.length; k++) {\r\n                              if (inputs[k].value==2) {\r\n                                inputs[k].checked=true;\r\n                        } else {\r\n                                inputs[k].checked=false;\r\n                        }\r\n                      }\r\n                } else {\r\n                  for (let j=0; j<i; j++) {\r\n                        if (inputs[j].value==1) {\r\n                                inputs[j].checked=true;\r\n                        } else {\r\n                                inputs[j].checked=false;\r\n                        }\r\n                      }\r\n                      for (let k=i+1; k<radios.length; k++) {\r\n                              if (inputs[k].value==2 && (k>i+1)) {\r\n                                inputs[k].checked=true;\r\n                        } else {\r\n                                inputs[k].checked=false;\r\n                        }\r\n                      }\r\n                }\r\n  });\r\n}"
         }
       ],
-      "title": "MPL choice"
+      "title": "MPL choice",
+      "_tab": "Scripts"
     },
     "5": {
       "id": "5",
@@ -160,13 +161,239 @@
       ],
       "title": "mplTask"
     },
+    "6": {
+      "id": "6",
+      "type": "lab.html.Form",
+      "content": "<header>\n  <h1>Instructions </h1>\n</header>\n<main>\n<form id=\"cheatingChoice\">\n\n<p class=\"paragraph\"></p>\n\n</form>\n</main>\n<footer>\n    <button class=\"continueButton\" form=\"cheatingChoice\" type=\"submit\" >Continue</button>\n</footer>",
+      "scrollTop": true,
+      "files": [],
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "messageHandlers": [
+        {
+          "title": "",
+          "message": "",
+          "code": ""
+        }
+      ],
+      "title": "Cheating"
+    },
+    "7": {
+      "id": "7",
+      "type": "lab.html.Form",
+      "content": "<header>\n  <h1>Instructions </h1>\n</header>\n<main>\n<form id=\"trustChoice\">\n\n<p class=\"paragraph\"></p>\n\n</form>\n</main>\n<footer>\n    <button class=\"continueButton\" form=\"trustChoice\" type=\"submit\" >Continue</button>\n</footer>",
+      "scrollTop": true,
+      "files": [],
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "messageHandlers": [
+        {
+          "title": "",
+          "message": "",
+          "code": ""
+        }
+      ],
+      "title": "Trust"
+    },
+    "8": {
+      "id": "8",
+      "type": "lab.flow.Sequence",
+      "children": [
+        "6",
+        "5",
+        "7"
+      ],
+      "files": [],
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "messageHandlers": [
+        {
+          "title": "",
+          "message": "",
+          "code": ""
+        }
+      ],
+      "title": "outcomeVariables",
+      "shuffle": true
+    },
+    "9": {
+      "id": "9",
+      "type": "lab.html.Form",
+      "content": "<header>\n  <h1>Choose your favourite painting ${this.parameters.counter} </h1>\n</header>\n<main>\n<form id=\"artPreferences\">\n\n<div class=\"myDiv\">\n  <table>\n    <thead>\n      <tr>\n        <td>Left option </td><td>Right option </td>\n      </tr>\n    </thead>\n      <tr>\n        <td> <img class=\"painting\" src=\"\"></img> </td>\n        <td><img class=\"painting\" src=\"\"></img> </td>\n      </tr>\n      <tr>\n        <td> <button class=\"continueButton\" value=0 type=\"button\" >Left</button> </td>\n        <td><button class=\"continueButton\" value=1 type=\"button\" >Right</button> </td>\n      </tr>\n  </table>\n</div>\n\n</form>\n</main>\n<footer>\n    \n</footer>",
+      "scrollTop": true,
+      "files": [],
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "messageHandlers": [
+        {
+          "title": "",
+          "message": "run",
+          "code": "const button = document.getElementsByClassName('continueButton');\r\nconst images = document.getElementsByClassName('painting');\r\nconst ds = this.options.datastore;\r\nlet artPreferences=parseInt(ds.get('artPreferences')) || 0;\r\n\r\nimages[0].src=this.parameters.klee;\r\nimages[1].src=this.parameters.kandinsky;\r\n\r\nbutton.forEach((element)=> element.addEventListener('click', (event)=> {\r\n  let choice = parseInt(event.target.value);\r\n  artPreferences += choice;\r\n  ds.set('artPreferences', artPreferences);\r\n  this.end();\r\n}));"
+        }
+      ],
+      "title": "artPreferences",
+      "_tab": "Content"
+    },
+    "10": {
+      "id": "10",
+      "type": "lab.flow.Loop",
+      "children": [
+        "9"
+      ],
+      "templateParameters": {
+        "columns": [
+          {
+            "name": "klee",
+            "type": "string"
+          },
+          {
+            "name": "kandinsky",
+            "type": "string"
+          }
+        ],
+        "rows": [
+          [
+            "https://www.bellasartes.gob.ar/media/uploads/coleccion/7966.jpg",
+            "https://www.biografiasyvidas.com/biografia/k/fotos/kandinsky_4.jpg"
+          ],
+          [
+            "https://www.3minutosdearte.com/wp-content/uploads/2018/09/Klee-Magia-de-los-peces-1925-e1633369586262.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/f/f0/Vassily_Kandinsky%2C_1923_-_Circles_in_a_Circle.jpg"
+          ],
+          [
+            "https://es.wahooart.com/Art.nsf/O/8XYQN9/$File/Paul-Klee-Landscape-with-Yellow-Birds.jpg",
+            "https://cdn.pixabay.com/photo/2021/05/24/20/36/wassily-kandinsky-6280547_1280.jpg"
+          ],
+          [
+            "https://www.artmajeur.com/medias/mini/t/o/tony-rubino/artwork/15522313_klee-burggarten-1919-painting-in-high-resolution-by-paul-klee-original-from-the-kunstmuseum-basel.jpg",
+            "https://www.artmajeur.com/medias/standard/a/d/administrator/blog/6448f069731476.45206248_wassily-kandinsky-composition-7.jpg"
+          ],
+          [
+            "https://image.invaluable.com/housePhotos/ROGALLERY/49/736249/H4175-L309842541.jpg",
+            "https://www.nacion.com/resizer/I265CujoyKVOSEa7IStTSuNqm5s=/1440x0/filters:format(png):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/gruponacion/CW7JQBRSA5HVVETEJVN3HVRIC4.png"
+          ]
+        ]
+      },
+      "sample": {
+        "mode": "sequential"
+      },
+      "files": [],
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "messageHandlers": [
+        {
+          "title": "",
+          "message": "",
+          "code": ""
+        }
+      ],
+      "title": "socialIdentity"
+    },
+    "11": {
+      "id": "11",
+      "type": "lab.html.Form",
+      "content": "<header>\n  <h1>Before moving on </h1>\n</header>\n<main>\n<form id=\"treatmentAssignment\">\n<p class=\"paragraph\" id=\"groupAssignment\">Based on your preferences among paintings, you belong to the group of participants </p>\n\n<p class=\"paragraph\" id=\"treatment\">For all the decisions that follows you will interact with someone </p>\n\n</form>\n</main>\n<footer>\n    <button class=\"continueButton\" form=\"treatmentAssignment\" type=\"submit\" >Continue</button>\n</footer>",
+      "scrollTop": true,
+      "files": [],
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "messageHandlers": [
+        {
+          "title": "",
+          "message": "run",
+          "code": "const ds = this.options.datastore;\r\nconst paragraphTreatment=document.getElementById('treatment');\r\nconst groupAssignment=document.getElementById('groupAssignment');\r\nlet draw=Math.random();\r\n\r\n///let treatment = (draw<0.5) ? 'ingroup': 'outgroup'; \r\nlet treatment = this.random.choice(['ingroup', 'outgroup']);\r\n///let treatmentNumber = this.random.range(2)\r\n\r\nds.set('treatment', treatment);\r\n\r\nlet artPreferences = this.state.artPreferences; ///ds.get('artPreferences');\r\nif (artPreferences<3) {\r\n  groupAssignment.insertAdjacentHTML('beforeend', 'Klee.');\r\n} else {\r\n  groupAssignment.insertAdjacentHTML('beforeend', 'Kandinsky.');\r\n}\r\n\r\n\r\n\r\nif (treatment=='ingroup') {\r\n  paragraphTreatment.insertAdjacentHTML('beforeend', 'your own group.');\r\n} else {\r\n  paragraphTreatment.insertAdjacentHTML('beforeend', 'from the other group.');\r\n}\r\n\r\n"
+        }
+      ],
+      "title": "treatmentAssignment",
+      "_tab": "Scripts"
+    },
     "root": {
       "id": "root",
       "title": "root",
       "type": "lab.flow.Sequence",
       "children": [
-        "5",
         "2",
+        "10",
+        "11",
+        "8",
         "1"
       ],
       "parameters": [],
@@ -195,7 +422,7 @@
         "source": "library"
       },
       "style.css": {
-        "content": "data:text/css,%2F*%20Please%20define%20your%20custom%20styles%20here%20*%2F%0D%0Amain%7B%0D%0A%20%20margin-left%3A%20250px%3B%0D%0A%20%20margin-right%3A%20250px%3B%0D%0A%20%20background-color%3A%20white%3B%0D%0A%20%20text-align%3A%20justify%3B%0D%0A%20%20line-height%3A%202%3B%0D%0A%20%20padding-left%3A%2010px%3B%0D%0A%7D%0D%0Aheader%7B%0D%0A%20%20background-color%3A%20%23232f3e%3B%0D%0A%20%20color%3A%20white%3B%0D%0A%20%20%20%20margin-left%3A%20250px%3B%0D%0A%20%20margin-right%3A%20250px%3B%0D%0A%7D%0D%0A.paragraph%7B%0D%0A%20%20text-align%3A%20justify%3B%0D%0A%20%20font-family%3A%20sans-serif%2C%20'Times%20New%20Roman'%2C%20Times%2C%20serif%3B%0D%0A%7D%0D%0Afooter%7B%0D%0A%20%20background-color%3A%20%23232f3e%3B%0D%0A%20%20%20%20margin-left%3A%20250px%3B%0D%0A%20%20margin-right%3A%20250px%3B%0D%0A%7D%0D%0A.labelInput%7B%0D%0A%20%20cursor%3A%20pointer%3B%0D%0A%20%20font-family%3A%20Georgia%2C%20'Times%20New%20Roman'%2C%20Times%2C%20serif%3B%0D%0A%20%20font-size%3A%2012pt%3B%0D%0A%7D%0D%0A.continueButton%7B%0D%0A%20%20cursor%3A%20pointer%3B%0D%0A%20%20background-color%3A%20yellow%3B%0D%0A%20%20border-radius%3A%2025px%3B%0D%0A%20%20color%3Ablack%3B%0D%0A%20%20width%3A%20200px%3B%0D%0A%20%20padding%3A%2012px%200%3B%0D%0A%20%20font-family%3A%20Georgia%2C%20'Times%20New%20Roman'%2C%20Times%2C%20serif%3B%0D%0A%20%20font-size%3A%2014pt%3B%0D%0A%7D%0D%0A.continueButton%3Adisabled%7B%0D%0A%20%20cursor%3A%20not-allowed%3B%0D%0A%20%20background-color%3A%20yellow%3B%0D%0A%20%20border-radius%3A%2025px%3B%0D%0A%20%20color%3Ablack%3B%0D%0A%20%20width%3A%20200px%3B%0D%0A%20%20padding%3A%2012px%200%3B%0D%0A%20%20font-family%3A%20Georgia%2C%20'Times%20New%20Roman'%2C%20Times%2C%20serif%3B%0D%0A%20%20font-size%3A%2014pt%3B%0D%0A%20%20opacity%3A%200.6%3B%0D%0A%7D%0D%0A.myContainer%7B%0D%0A%20%20border%3A%202pt%20solid%20black%3B%0D%0A%20%20position%3A%20absolute%3B%0D%0A%20%20bottom%3A%20auto%3B%0D%0A%20%20left%3A50%25%3B%0D%0A%20%20transform%3A%20translateX(-50%25)%3B%0D%0A%20%20padding%3A%2010px%2010px%2010px%2010px%3B%0D%0A%7D%0D%0A.iframeObject%7B%0D%0A%20%20width%3A600px%3B%0D%0A%20%20height%3A%20400px%3B%0D%0A%20%20position%3A%20relative%3B%0D%0A%20%20left%3A%2050%25%3B%0D%0A%20%20%20%20transform%3A%20translateX(-50%25)%3B%0D%0A%7D%0D%0A",
+        "content": "data:text/css,%2F*%20Please%20define%20your%20custom%20styles%20here%20*%2F%0D%0Amain%7B%0D%0A%20%20margin-left%3A%20250px%3B%0D%0A%20%20margin-right%3A%20250px%3B%0D%0A%20%20background-color%3A%20white%3B%0D%0A%20%20text-align%3A%20justify%3B%0D%0A%20%20line-height%3A%202%3B%0D%0A%20%20padding-left%3A%2010px%3B%0D%0A%7D%0D%0Aheader%7B%0D%0A%20%20background-color%3A%20%23232f3e%3B%0D%0A%20%20color%3A%20white%3B%0D%0A%20%20%20%20margin-left%3A%20250px%3B%0D%0A%20%20margin-right%3A%20250px%3B%0D%0A%7D%0D%0A.paragraph%7B%0D%0A%20%20text-align%3A%20justify%3B%0D%0A%20%20font-family%3A%20sans-serif%2C%20'Times%20New%20Roman'%2C%20Times%2C%20serif%3B%0D%0A%7D%0D%0Afooter%7B%0D%0A%20%20background-color%3A%20%23232f3e%3B%0D%0A%20%20%20%20margin-left%3A%20250px%3B%0D%0A%20%20margin-right%3A%20250px%3B%0D%0A%7D%0D%0A.labelInput%7B%0D%0A%20%20cursor%3A%20pointer%3B%0D%0A%20%20font-family%3A%20Georgia%2C%20'Times%20New%20Roman'%2C%20Times%2C%20serif%3B%0D%0A%20%20font-size%3A%2012pt%3B%0D%0A%7D%0D%0A.continueButton%7B%0D%0A%20%20cursor%3A%20pointer%3B%0D%0A%20%20background-color%3A%20yellow%3B%0D%0A%20%20border-radius%3A%2025px%3B%0D%0A%20%20color%3Ablack%3B%0D%0A%20%20width%3A%20200px%3B%0D%0A%20%20padding%3A%2012px%200%3B%0D%0A%20%20font-family%3A%20Georgia%2C%20'Times%20New%20Roman'%2C%20Times%2C%20serif%3B%0D%0A%20%20font-size%3A%2014pt%3B%0D%0A%7D%0D%0A.continueButton%3Adisabled%7B%0D%0A%20%20cursor%3A%20not-allowed%3B%0D%0A%20%20background-color%3A%20yellow%3B%0D%0A%20%20border-radius%3A%2025px%3B%0D%0A%20%20color%3Ablack%3B%0D%0A%20%20width%3A%20200px%3B%0D%0A%20%20padding%3A%2012px%200%3B%0D%0A%20%20font-family%3A%20Georgia%2C%20'Times%20New%20Roman'%2C%20Times%2C%20serif%3B%0D%0A%20%20font-size%3A%2014pt%3B%0D%0A%20%20opacity%3A%200.6%3B%0D%0A%7D%0D%0A.myContainer%7B%0D%0A%20%20border%3A%202pt%20solid%20black%3B%0D%0A%20%20position%3A%20absolute%3B%0D%0A%20%20bottom%3A%20auto%3B%0D%0A%20%20left%3A50%25%3B%0D%0A%20%20transform%3A%20translateX(-50%25)%3B%0D%0A%20%20padding%3A%2010px%2010px%2010px%2010px%3B%0D%0A%7D%0D%0A.iframeObject%7B%0D%0A%20%20width%3A600px%3B%0D%0A%20%20height%3A%20400px%3B%0D%0A%20%20position%3A%20relative%3B%0D%0A%20%20left%3A%2050%25%3B%0D%0A%20%20%20%20transform%3A%20translateX(-50%25)%3B%0D%0A%7D%0D%0A.myDiv%7B%0D%0A%20%20background-color%3A%20blueviolet%3B%0D%0A%20%20margin%3A%20auto%3B%20%20%0D%0A%20%20width%3A%20900px%3B%0D%0A%20%20text-align%3A%20center%3B%0D%0A%7D%0D%0A.painting%7B%0D%0A%20%20width%3A%20250px%3B%0D%0A%20%20height%3A%20200px%3B%0D%0A%7D%0D%0A.checkmark%20%7B%0D%0A%20%20%20%20%20%20%20%20%20%20background-color%3A%20whitesmoke%3B%0D%0A%20%20%20%20%20%20%20%20%7D%0D%0A",
         "source": "library"
       },
       "embedded/6686a160a001e8b49649864b187edd7276ea4b7a8d9e5ed14110b95e5cd9130d.pdf": {
