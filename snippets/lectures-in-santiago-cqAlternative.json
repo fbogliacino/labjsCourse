@@ -160,11 +160,107 @@
       ],
       "title": "mplTask"
     },
+    "6": {
+      "id": "6",
+      "type": "lab.html.Form",
+      "content": "<header>\n  <h1> Comprehension question: Feedback </h1>\n</header>\n<main>\n<form id=\"comprehensionQuestionFeedback\">\n\n<p class=\"paragraph\" id=\"feedback\"></p>\n\n<!--\n<p class=\"paragraph\"> </p>\n<input type=\"radio\" name=\"cQ1\" value=\"1\" id=\"cQ1_1\" required><label class=\"labelInput\" for=\"cQ1_1\">1 row</label><br>\n<input type=\"radio\" name=\"cQ1\" value=\"2\" id=\"cQ1_2\"><label class=\"labelInput\" for=\"cQ1_2\">3 rows</label><br>\n<input type=\"radio\" name=\"cQ1\" value=\"3\" id=\"cQ1_3\"><label class=\"labelInput\" for=\"cQ1_3\">5 rows</label><br>\n<input type=\"radio\" name=\"cQ1\" value=\"4\" id=\"cQ1_4\"><label class=\"labelInput\" for=\"cQ1_4\">all rows</label><br>\n-->\n\n</form>\n</main>\n<footer>\n    <button class=\"continueButton\" form=\"comprehensionQuestionFeedback\" type=\"submit\">Continue</button>\n</footer>",
+      "scrollTop": true,
+      "files": [],
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "messageHandlers": [
+        {
+          "title": "",
+          "message": "run",
+          "code": "const ds = this.options.datastore;\r\nconst correctStatement=\"Correct! You can now move on and make your decision.\";\r\nconst incorrectStatement=\"Incorrect! Please try to answer again.\";\r\nconst feedback = document.getElementById('feedback');\r\nlet response = ds.get('cQ1');\r\nconst form=document.getElementsByTagName('form');\r\n\r\n\r\nif (response==1) {\r\n  feedback.innerText = correctStatement;\r\n} else {\r\n  feedback.innerText = incorrectStatement;  \r\n    const container = document.createElement('div');\r\n    const question=document.createElement('p');\r\n    question.classList.add(\"paragraph\");\r\n    question.textContent = \"If this task is selected for payment, how many rows will be paid?\";\r\n    container.appendChild(question);\r\n    let input=[];\r\n    let label=[];\r\n    for (let i=0;i<4;i++) {\r\n      input[i]=document.createElement('input')\r\n      input[i].name=\"cQ2\"\r\n      input[i].value=i+1;\r\n      input[i].type=\"radio\";\r\n      input[i].id = `cQ2_${i}`;\r\n      label[i]=document.createElement('label');\r\n      label[i].classList.add('labelInput');\r\n      label[i].innerHTML=`${i} rows <br>`;\r\n      label[i].htmlFor=`cQ2_${i}`;\r\n      container.appendChild(input[i]);\r\n      container.appendChild(label[i]);\r\n    }\r\n    input[0].setAttribute('required', true);\r\n    form[0].append(container);\r\n};\r\n\r\n\r\n\r\n\r\n"
+        }
+      ],
+      "title": "Fedback",
+      "_tab": "Scripts"
+    },
+    "7": {
+      "id": "7",
+      "type": "lab.flow.Sequence",
+      "children": [
+        "8",
+        "6"
+      ],
+      "files": [],
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "messageHandlers": [
+        {
+          "title": "",
+          "message": "",
+          "code": ""
+        }
+      ],
+      "title": "mplTaskMariana",
+      "_tab": "Scripts"
+    },
+    "8": {
+      "id": "8",
+      "type": "lab.html.Form",
+      "content": "<header>\n  <h1>Instructions </h1>\n</header>\n<main>\n<form id=\"comprehensionQuestion\">\n\n<p class=\"paragraph\" id=\"treatmentAssignment\">Remember you will be playing against </p>\n\n<p class=\"paragraph\">Here are the instructions on the MPL </p>\n\n<p class=\"paragraph\">If this task is selected for payment, how many rows will be paid? </p>\n<input type=\"radio\" name=\"cQ1\" value=\"1\" id=\"cQ1_1\" required><label class=\"labelInput\" for=\"cQ1_1\">1 row</label><br>\n<input type=\"radio\" name=\"cQ1\" value=\"2\" id=\"cQ1_2\"><label class=\"labelInput\" for=\"cQ1_2\">3 rows</label><br>\n<input type=\"radio\" name=\"cQ1\" value=\"3\" id=\"cQ1_3\"><label class=\"labelInput\" for=\"cQ1_3\">5 rows</label><br>\n<input type=\"radio\" name=\"cQ1\" value=\"4\" id=\"cQ1_4\"><label class=\"labelInput\" for=\"cQ1_4\">all rows</label><br>\n\n\n</form>\n</main>\n<footer>\n    <button class=\"continueButton\" form=\"comprehensionQuestion\" type=\"submit\">Continue</button>\n</footer>",
+      "scrollTop": true,
+      "files": [],
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "messageHandlers": [
+        {
+          "title": "",
+          "message": "run",
+          "code": "\r\n\r\n\r\n\r\n\r\n"
+        }
+      ],
+      "title": "mplQuestion",
+      "_tab": "Content"
+    },
     "root": {
       "id": "root",
       "title": "root",
       "type": "lab.flow.Sequence",
       "children": [
+        "7",
         "5",
         "2",
         "1"
