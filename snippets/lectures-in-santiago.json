@@ -101,7 +101,7 @@
     "4": {
       "id": "4",
       "type": "lab.html.Form",
-      "content": "<header>\n  <h1>Make your choice</h1>\n</header>\n<main>\n<form id=\"mplChoice\">\n\n<p class=\"paragraph\" id=\"treatment\" style=\"text-align:center;\">Remember that <strong>Other</strong> will be someone from </p>\n\n<p class=\"paragraph\">In the Table below, the option on the left does not change, while the option on the right gets better as you go down the list.</p>\n<p class=\"paragraph\">You must make a choice in all rows, but for simplicity, you only have to click once on the row where you want to switch from left to right. You can modify your choice as many times as you want, and you can also select only the left or only the right.</p>\n <p class=\"paragraph\">This is how you make sure to choose according to your preferences:</p>\n<ul> \n<li>Look at the first row. If you prefer the option on the right, choose it. The computer will automatically select the right option in all the rows.</li>\n<li>If, instead, you prefer the option on the left, go down the list and find the first row where you prefer the option on the right. Choose the right option in that row. The computer will automatically select the right option in all the rows below and the left in all the rows above.</li>\n<li>If you always prefer the option on the left, choose it in the last row. The computer will automatically select the left option in all the rows.</li>\n</ul>\n\n<div class=\"myDiv\">\n<table>\n  <thead>\n    <tr>\n      <td></td><td><strong>Left option</strong></td><td><strong>Right option</strong></td><td></td>\n    </tr>\n  </thead> \n      <tr>\n      <td><label class=\"labelInput\" for=\"MDG0_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input required id=\"MDG0_l\" name=\"MPL0\" type=\"radio\" value=\"1\"></td><td><input id=\"MDG0_r\" name=\"MPL0\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInput\" for=\"MDG0_r\"><strong>0</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInput\" for=\"MDG1_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input required id=\"MDG1_l\" name=\"MPL1\" type=\"radio\" value=\"1\" ></td><td><input id=\"MDG1_r\" name=\"MPL1\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInput\" for=\"MDG1_r\"><strong>1</strong> for <strong>You</strong>, <strong>1</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInput\" for=\"MDG2_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input required id=\"MDG2_l\" name=\"MPL2\" type=\"radio\" value=\"1\" ></td><td><input id=\"MDG2_r\" name=\"MPL2\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInput\" for=\"MDG2_r\"><strong>2</strong> for <strong>You</strong>, <strong>2</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInput\" for=\"MDG3_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input required id=\"MDG3_l\" name=\"MPL3\" type=\"radio\" value=\"1\" ></td><td><input id=\"MDG3_r\" name=\"MPL3\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInput\" for=\"MDG3_r\"><strong>3</strong> for <strong>You</strong>, <strong>3</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInput\" for=\"MDG4_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input required id=\"MDG4_l\" name=\"MPL4\" type=\"radio\" value=\"1\" ></td><td><input id=\"MDG4_r\" name=\"MPL4\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInput\" for=\"MDG4_r\"><strong>4</strong> for <strong>You</strong>, <strong>4</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInput\" for=\"MDG5_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input required id=\"MDG5_l\" name=\"MPL5\" type=\"radio\" value=\"1\" ></td><td><input id=\"MDG5_r\" name=\"MPL5\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInput\" for=\"MDG5_r\"><strong>5</strong> for <strong>You</strong>, <strong>5</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInput\" for=\"MDG6_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input required id=\"MDG6_l\" name=\"MPL6\" type=\"radio\" value=\"1\" ></td><td><input id=\"MDG6_r\" name=\"MPL6\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInput\" for=\"MDG6_r\"><strong>6</strong> for <strong>You</strong>, <strong>6</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInput\" for=\"MDG7_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input required id=\"MDG7_l\" name=\"MPL7\" type=\"radio\" value=\"1\" ></td><td><input id=\"MDG7_r\" name=\"MPL7\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInput\" for=\"MDG7_r\"><strong>7</strong> for <strong>You</strong>, <strong>7</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInput\" for=\"MDG8_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input required id=\"MDG8_l\" name=\"MPL8\" type=\"radio\" value=\"1\" ></td><td><input id=\"MDG8_r\" name=\"MPL8\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInput\" for=\"MDG8_r\"><strong>8</strong> for <strong>You</strong>, <strong>8</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInput\" for=\"MDG9_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input required id=\"MDG9_l\" name=\"MPL9\" type=\"radio\" value=\"1\" ></td><td><input id=\"MDG9_r\" name=\"MPL9\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInput\" for=\"MDG9_r\"><strong>9</strong> for <strong>You</strong>, <strong>9</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInput\" for=\"MDG10_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input required id=\"MDG10_l\" name=\"MPL10\" type=\"radio\" value=\"1\" ></td><td><input id=\"MDG10_r\" name=\"MPL10\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInput\" for=\"MDG10_r\"><strong>10</strong> for <strong>You</strong>, <strong>10</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInput\" for=\"MDG11_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input required id=\"MDG11_l\" name=\"MPL11\" type=\"radio\" value=\"1\" ></td><td><input id=\"MDG11_r\" name=\"MPL11\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInput\" for=\"MDG11_r\"><strong>11</strong> for <strong>You</strong>, <strong>11</strong> for <strong>Other</strong></label></td>\n    </tr>\n</table>\n</div>\n</form>\n</main>\n<footer>\n    <button class=\"continueButton\" form=\"mplChoice\" type=\"submit\" >Continue</button>\n</footer>",
+      "content": "<header>\n  <h1>Make your choice</h1>\n</header>\n<main>\n<form id=\"mplChoice\">\n\n<p class=\"paragraph\" id=\"treatment\" style=\"text-align:center;\">Remember that <strong>Other</strong> will be someone from </p>\n\n<p class=\"paragraph\">In the Table below, the option on the left does not change, while the option on the right gets better as you go down the list.</p>\n<p class=\"paragraph\">You must make a choice in all rows, but for simplicity, you only have to click once on the row where you want to switch from left to right. You can modify your choice as many times as you want, and you can also select only the left or only the right.</p>\n <p class=\"paragraph\">This is how you make sure to choose according to your preferences:</p>\n<ul> \n<li>Look at the first row. If you prefer the option on the right, choose it. The computer will automatically select the right option in all the rows.</li>\n<li>If, instead, you prefer the option on the left, go down the list and find the first row where you prefer the option on the right. Choose the right option in that row. The computer will automatically select the right option in all the rows below and the left in all the rows above.</li>\n<li>If you always prefer the option on the left, choose it in the last row. The computer will automatically select the left option in all the rows.</li>\n</ul>\n\n<div class=\"myDiv\">\n<table>\n  <thead>\n    <tr>\n      <td></td><td><strong>Left option</strong></td><td><strong>Right option</strong></td><td></td>\n    </tr>\n  </thead> \n      <tr>\n      <td><label class=\"labelInput\" for=\"MDG0_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG0_l\" class=\"checkmark\" type=\"radio\" value=\"1\"></td><td><input id=\"MDG0_r\" class=\"checkmark\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInput\" for=\"MDG0_r\"><strong>0</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInput\" for=\"MDG1_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG1_l\" class=\"checkmark\" type=\"radio\" value=\"1\" ></td><td><input id=\"MDG1_r\" class=\"checkmark\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInput\" for=\"MDG1_r\"><strong>1</strong> for <strong>You</strong>, <strong>1</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInput\" for=\"MDG2_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG2_l\" class=\"checkmark\" type=\"radio\" value=\"1\" ></td><td><input id=\"MDG2_r\" class=\"checkmark\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInput\" for=\"MDG2_r\"><strong>2</strong> for <strong>You</strong>, <strong>2</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInput\" for=\"MDG3_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG3_l\" class=\"checkmark\" type=\"radio\" value=\"1\" ></td><td><input id=\"MDG3_r\" class=\"checkmark\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInput\" for=\"MDG3_r\"><strong>3</strong> for <strong>You</strong>, <strong>3</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInput\" for=\"MDG4_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG4_l\" class=\"checkmark\" type=\"radio\" value=\"1\" ></td><td><input id=\"MDG4_r\" class=\"checkmark\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInput\" for=\"MDG4_r\"><strong>4</strong> for <strong>You</strong>, <strong>4</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInput\" for=\"MDG5_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG5_l\" class=\"checkmark\" type=\"radio\" value=\"1\" ></td><td><input id=\"MDG5_r\" class=\"checkmark\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInput\" for=\"MDG5_r\"><strong>5</strong> for <strong>You</strong>, <strong>5</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInput\" for=\"MDG6_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG6_l\" class=\"checkmark\" type=\"radio\" value=\"1\" ></td><td><input id=\"MDG6_r\" class=\"checkmark\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInput\" for=\"MDG6_r\"><strong>6</strong> for <strong>You</strong>, <strong>6</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInput\" for=\"MDG7_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG7_l\" class=\"checkmark\" type=\"radio\" value=\"1\" ></td><td><input id=\"MDG7_r\" class=\"checkmark\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInput\" for=\"MDG7_r\"><strong>7</strong> for <strong>You</strong>, <strong>7</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInput\" for=\"MDG8_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG8_l\" class=\"checkmark\" type=\"radio\" value=\"1\" ></td><td><input id=\"MDG8_r\" class=\"checkmark\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInput\" for=\"MDG8_r\"><strong>8</strong> for <strong>You</strong>, <strong>8</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInput\" for=\"MDG9_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG9_l\" class=\"checkmark\" type=\"radio\" value=\"1\" ></td><td><input id=\"MDG9_r\" class=\"checkmark\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInput\" for=\"MDG9_r\"><strong>9</strong> for <strong>You</strong>, <strong>9</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInput\" for=\"MDG10_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG10_l\" class=\"checkmark\" type=\"radio\" value=\"1\" ></td><td><input id=\"MDG10_r\" class=\"checkmark\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInput\" for=\"MDG10_r\"><strong>10</strong> for <strong>You</strong>, <strong>10</strong> for <strong>Other</strong></label></td>\n    </tr>\n          <tr>\n      <td><label class=\"labelInput\" for=\"MDG11_l\"><strong>10</strong> for <strong>You</strong>, <strong>0</strong> for <strong>Other</strong></label></td><td><input id=\"MDG11_l\" class=\"checkmark\" type=\"radio\" value=\"1\" ></td><td><input id=\"MDG11_r\" class=\"checkmark\" type=\"radio\" value=\"2\"></td><td><label class=\"labelInput\" for=\"MDG11_r\"><strong>11</strong> for <strong>You</strong>, <strong>11</strong> for <strong>Other</strong></label></td>\n    </tr>\n</table>\n</div>\n\n\n</form>\n</main>\n<footer>\n    <button class=\"continueButton\" form=\"mplChoice\" type=\"submit\" disabled>Continue</button>\n</footer>",
       "scrollTop": true,
       "files": [],
       "responses": [
@@ -123,7 +123,7 @@
         {
           "title": "",
           "message": "run",
-          "code": "const treatment = this.options.datastore.get('treatment');\r\nconst paragraphTreatment = document.getElementById('treatment');\r\nif (treatment=='ingroup') {\r\n  paragraphTreatment.insertAdjacentHTML('beforeend', '<strong>your own group</strong>.');\r\n} else {\r\n  paragraphTreatment.insertAdjacentHTML('beforeend', '<strong>from the other group</strong>.');\r\n}\r\n\r\nconst radios = document.getElementsByTagName('input');\r\nconst inputs = document.getElementsByTagName('input');\r\n\r\n\r\n\r\nfor (let i=0; i<radios.length; i++) {\r\n  radios[i].addEventListener('click', (event) => {\r\n                if(event.target.value==2) {\r\n                      for (let j=0; j<i; j++) {\r\n                        if (inputs[j].value==1 && j<(i-1)) {\r\n                                inputs[j].checked=true;\r\n                        } else {\r\n                                inputs[j].checked=false;\r\n                        }\r\n                      }\r\n                      for (let k=i+1; k<radios.length; k++) {\r\n                              if (inputs[k].value==2) {\r\n                                inputs[k].checked=true;\r\n                        } else {\r\n                                inputs[k].checked=false;\r\n                        }\r\n                      }\r\n                } else {\r\n                  for (let j=0; j<i; j++) {\r\n                        if (inputs[j].value==1) {\r\n                                inputs[j].checked=true;\r\n                        } else {\r\n                                inputs[j].checked=false;\r\n                        }\r\n                      }\r\n                      for (let k=i+1; k<radios.length; k++) {\r\n                              if (inputs[k].value==2 && (k>i+1)) {\r\n                                inputs[k].checked=true;\r\n                        } else {\r\n                                inputs[k].checked=false;\r\n                        }\r\n                      }\r\n                }\r\n  });\r\n}"
+          "code": "const treatment = this.options.datastore.get('treatment');\r\nconst paragraphTreatment = document.getElementById('treatment');\r\nif (treatment=='ingroup') {\r\n  paragraphTreatment.insertAdjacentHTML('beforeend', '<strong>your own group</strong>.');\r\n} else {\r\n  paragraphTreatment.insertAdjacentHTML('beforeend', '<strong>from the other group</strong>.');\r\n}\r\n\r\nconst button = document.querySelector('.continueButton');\r\n\r\nconst radios = document.getElementsByTagName('input');\r\nconst inputs = document.getElementsByTagName('input');\r\n\r\n\r\n\r\nfor (let i=0; i<radios.length; i++) {\r\n  radios[i].addEventListener('click', (event) => {\r\n                if(event.target.value==2) {\r\n                      for (let j=0; j<i; j++) {\r\n                        if (inputs[j].value==1 && j<(i-1)) {\r\n                                inputs[j].checked=true;\r\n                        } else {\r\n                                inputs[j].checked=false;\r\n                        }\r\n                      }\r\n                      for (let k=i+1; k<radios.length; k++) {\r\n                              if (inputs[k].value==2) {\r\n                                inputs[k].checked=true;\r\n                        } else {\r\n                                inputs[k].checked=false;\r\n                        }\r\n                      }\r\n                } else {\r\n                  for (let j=0; j<i; j++) {\r\n                        if (inputs[j].value==1) {\r\n                                inputs[j].checked=true;\r\n                        } else {\r\n                                inputs[j].checked=false;\r\n                        }\r\n                      }\r\n                      for (let k=i+1; k<radios.length; k++) {\r\n                              if (inputs[k].value==2 && (k>i+1)) {\r\n                                inputs[k].checked=true;\r\n                        } else {\r\n                                inputs[k].checked=false;\r\n                        }\r\n                      }\r\n                }\r\n                button.disabled=false;\r\n  });\r\n}\r\n\r\nbutton.addEventListener('click', (event)=>{\r\n              let switchingPoint=0;\r\n              const mpl=document.querySelectorAll('.checkmark');\r\n              for (let i=0; i<mpl.length; i++) {\r\n                      if (mpl[i].value==1 && mpl[i].checked==true) {\r\n                              switchingPoint += 1;\r\n                      }\r\n              };\r\n              this.options.datastore.set('switchingPoint', switchingPoint);\r\n});\r\n"
         }
       ],
       "title": "MPL choice",
@@ -189,13 +189,13 @@
           "code": "const treatment = this.options.datastore.get('treatment');\r\nconst paragraphTreatment = document.getElementById('treatment');\r\nif (treatment=='ingroup') {\r\n  paragraphTreatment.insertAdjacentHTML('beforeend', '<strong>your own group</strong>.');\r\n} else {\r\n  paragraphTreatment.insertAdjacentHTML('beforeend', '<strong>from the other group</strong>.');\r\n}\r\nconst myTag = document.getElementById('round');\r\nlet round = this.options.datastore.get('round') || 0;\r\nround +=1;\r\nthis.options.datastore.set('round', round);\r\n\r\nswitch (round) {\r\n  case 1: \r\n  myTag.textContent = 'first';\r\n  break;\r\n  case 2: \r\n  myTag.textContent = 'second';\r\n  break;\r\n  case 3: \r\n  myTag.textContent = 'third';\r\n  break;\r\n}\r\n"
         }
       ],
-      "title": "instructions",
-      "_tab": "Scripts"
+      "title": "instructionsCheating",
+      "_tab": "Content"
     },
     "7": {
       "id": "7",
       "type": "lab.html.Form",
-      "content": "<header>\n   <h1>This is your <tag id=\"round\"></tag> decision </h1>\n</header>\n<main>\n<form id=\"trustInstructions\">\n\n<p class=\"paragraph\"></p>\n\n</form>\n</main>\n<footer>\n    <button class=\"continueButton\" form=\"trustInstructions\" type=\"submit\" >Continue</button>\n</footer>",
+      "content": "<header>\n   <h1>This is your <tag id=\"round\"></tag> decision </h1>\n</header>\n<main>\n<form id=\"trustInstructions\">\n\n<p class=\"paragraph\">Some instructions</p>\n\n</form>\n</main>\n<footer>\n    <button class=\"continueButton\" form=\"trustInstructions\" type=\"submit\" >Continue</button>\n</footer>",
       "scrollTop": true,
       "files": [],
       "responses": [
@@ -220,7 +220,7 @@
           "code": "const myTag = document.getElementById('round');\r\nlet round = this.options.datastore.get('round') || 0;\r\nround +=1;\r\nthis.options.datastore.set('round', round);\r\n\r\nswitch (round) {\r\n  case 1: \r\n  myTag.textContent = 'first';\r\n  break;\r\n  case 2: \r\n  myTag.textContent = 'second';\r\n  break;\r\n  case 3: \r\n  myTag.textContent = 'third';\r\n  break;\r\n}\r\n\r\n"
         }
       ],
-      "title": "instructions",
+      "title": "instructionsTrust",
       "_tab": "Content"
     },
     "8": {
@@ -418,7 +418,7 @@
         }
       ],
       "title": "cheatingSequence",
-      "_tab": "Scripts"
+      "_tab": "Content"
     },
     "13": {
       "id": "13",
@@ -448,8 +448,8 @@
           "code": "const treatment = this.options.datastore.get('treatment');\r\nconst paragraphTreatment = document.getElementById('treatment');\r\nconst myCanvas = document.getElementById('myCanvas');\r\n\r\nconst ctx = myCanvas.getContext('2d');\r\nlet draw = this.random.choice([1,2,3,4]);\r\n  ctx.font = 'bold 100px Arial';\r\n  ctx.fillStyle = 'blue';\r\n  ctx.textAlign = 'center';\r\n  ctx.textBaseline = 'middle';\r\n  ctx.fillText(draw.toString(), myCanvas.width / 2, myCanvas.height / 2);\r\n\r\nif (treatment=='ingroup') {\r\n  paragraphTreatment.insertAdjacentHTML('beforeend', '<strong>your own group</strong>.');\r\n} else {\r\n  paragraphTreatment.insertAdjacentHTML('beforeend', '<strong>from the other group</strong>.');\r\n}"
         }
       ],
-      "title": "choice",
-      "_tab": "Scripts"
+      "title": "choiceCheating",
+      "_tab": "Content"
     },
     "14": {
       "id": "14",
@@ -516,7 +516,7 @@
     "16": {
       "id": "16",
       "type": "lab.html.Form",
-      "content": "<header>\n   <h1>Now make your decision </h1>\n</header>\n<main>\n<form id=\"trustChoice\">\n\n<p class=\"paragraph\"></p>\n\n</form>\n</main>\n<footer>\n    <button class=\"continueButton\" form=\"trustChoice\" type=\"submit\" >Continue</button>\n</footer>",
+      "content": "<header>\n   <h1>Now make your decision: IN or OUT? </h1>\n</header>\n<main>\n<form id=\"trustChoice\">\n\n<p class=\"paragraph\">This is the message for you by your counterpart:</p>\n\n<p class=\"paragraph\" id=\"promise\"></p>\n\n<p class=\"paragraph\">Make your choice:</p>\n<input id=\"trustOut\" name=\"trust\" type=\"radio\" value=\"0\"  required> <label class=\"labelInput\" for=\"trustOut\">No</label><br>\n<input id=\"trustIn\" name=\"trust\" type=\"radio\" value=\"1\"> <label class=\"labelInput\" for=\"trustIn\">Yes</label><br>\n\n\n\n</form>\n</main>\n<footer>\n    <button class=\"continueButton\" form=\"trustChoice\" type=\"submit\" >Continue</button>\n</footer>",
       "scrollTop": true,
       "files": [],
       "responses": [
@@ -537,15 +537,15 @@
       "messageHandlers": [
         {
           "title": "",
-          "message": "",
-          "code": ""
+          "message": "run",
+          "code": "const choices=[0, 1, 0];\r\nconst ids = ['a001', 'a002', 'a003'];\r\nconst promises = ['trust me I will roll', 'I am a trustworthy person', 'pleas help me'];\r\n\r\n\r\nconst paragraphMessage= document.getElementById('promise');\r\n\r\nlet Index = this.parameters.Index;\r\n\r\n\r\nparagraphMessage.textContent = promises[Index];\r\nthis.options.datastore.set('choiceByB', choices[Index]);\r\nthis.options.datastore.set('codeB', ids[Index]);\r\n"
         }
       ],
-      "title": "choice"
+      "title": "choiceTrust",
+      "_tab": "Scripts"
     },
-    "root": {
-      "id": "root",
-      "title": "root",
+    "17": {
+      "id": "17",
       "type": "lab.flow.Sequence",
       "children": [
         "14",
@@ -554,6 +554,39 @@
         "11",
         "8",
         "1"
+      ],
+      "files": [],
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "parameters": [
+        {
+          "name": "Index",
+          "value": "1",
+          "type": "number"
+        }
+      ],
+      "messageHandlers": [
+        {
+          "title": "",
+          "message": "",
+          "code": ""
+        }
+      ],
+      "title": "Sequence",
+      "_tab": "Parameters"
+    },
+    "root": {
+      "id": "root",
+      "title": "root",
+      "type": "lab.flow.Sequence",
+      "children": [
+        "17"
       ],
       "parameters": [],
       "plugins": [
