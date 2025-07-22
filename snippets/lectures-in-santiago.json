@@ -475,11 +475,12 @@
       "messageHandlers": [
         {
           "title": "",
-          "message": "",
-          "code": ""
+          "message": "run",
+          "code": "let url = this.state.url;\r\nthis.state.PID = url.PROLIFIC_PID;"
         }
       ],
-      "title": "Welcome"
+      "title": "Welcome",
+      "_tab": "Scripts"
     },
     "15": {
       "id": "15",
